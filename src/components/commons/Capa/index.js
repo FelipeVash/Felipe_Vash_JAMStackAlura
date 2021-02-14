@@ -5,7 +5,7 @@ import CapaWrapper from './styles/CapaWrapper';
 const imgUrl = require("../../../../public/images/capa.jpg").default;
 
 const Title = styled.h1`
-  font-size:3.5rem;
+  font-size:3.2rem;
   color: ${({ theme }) => theme.colors.primary.main.color};
   margin: 5% 0 0 0;
   text-shadow: 3px 2px #000000;

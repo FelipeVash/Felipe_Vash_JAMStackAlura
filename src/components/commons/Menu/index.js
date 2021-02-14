@@ -8,19 +8,11 @@ const imgUrl = require("../../../../public/images/logo.jpeg").default;
 export default function Menu() {
   return (
     <MenuWrapper>
-      <MenuWrapper.LeftSide> {/* MenuWrapper.LeftSide */}
-        <Image 
-          src={imgUrl}
-          alt="Logo Felipe Vash"
-          width='100%'
-          height='100%'
-        />
-      </MenuWrapper.LeftSide>
       <MenuWrapper.CentralSide as="ul"> {/* MenuWrapper.CentralSide */}
         {[
           { url: '/', name: 'Home' },
           { url: '/projetos', name: 'Projetos' },
-          { url: '/sobre', name: 'Sobre' },
+          { url: '/sobre', name: 'Sobre Mim' },
         ].map((link) => (
           <li key={link.url}>
             <Text variant="smallestException" tag="a" href={link.url}>
@@ -29,8 +21,6 @@ export default function Menu() {
           </li>
         ))}
       </MenuWrapper.CentralSide>
-      <MenuWrapper.RightSide> {/* MenuWrapper.RightSide */}
-      </MenuWrapper.RightSide>
     </MenuWrapper>
   );
 }
