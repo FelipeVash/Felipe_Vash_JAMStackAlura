@@ -15,7 +15,8 @@
     "styled-components": "^5.0.0"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.8.0"
+    "babel-plugin-styled-components": "^1.8.0",
+    "file-loader": "^6.2.0"
   },
   "license": "MIT"
 }
