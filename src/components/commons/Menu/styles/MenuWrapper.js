@@ -6,15 +6,15 @@ export const MenuWrapper = styled.nav`
   font-family: 'Rubik', sans-serif;
   display: flex;
   align-items: center;
-/*   justify-content: space-between; */
+  justify-content: space-between;
   flex-wrap: wrap;
-/*   padding-left: 28px;
-  padding-right: 28px; */
-  background-color: #494949;
+  padding-left: 28px;
+  padding-right: 28px;
+  background-color: #000000;
   width:100%;
   ${breakpointsMedia({
     md: css`
-      justify-content: flex-start;
+      justify-content: center;
       margin-left: auto;
       margin-right: auto;
       width: 100%;
@@ -56,7 +56,7 @@ MenuWrapper.CentralSide = styled.div`
   list-style: none;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-top: 17px;
   border-top: 1px solid #88989E;
   border-bottom: 1px solid #88989E;
@@ -65,13 +65,13 @@ MenuWrapper.CentralSide = styled.div`
   ${breakpointsMedia({
     md: css`
 /*       max-width: 332px; */
-      justify-content: space-around;
+      justify-content: space-evenly;
       flex: 1;
       order: initial;
       border: none;
       margin: 0;
-      padding-top: 0;
-      padding-bottom: 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
     `,
   })}
   a {
@@ -91,7 +91,7 @@ MenuWrapper.CentralSide = styled.div`
     &:hover,
     &:focus {
       font-weight: 500;
-      color: #070C0E;
+      color: #00ffff;
       
     }
   }
