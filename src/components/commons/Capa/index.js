@@ -6,7 +6,7 @@ const imgUrl = require("../../../../public/images/capa.jpg").default;
 
 const Title = styled.h1`
   font-size:3.5rem;
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.primary.main.color};
   margin: 5% 0 0 0;
   text-shadow: 3px 2px #000000;
   padding: 10px 10px 10px 10px;
@@ -14,7 +14,7 @@ const Title = styled.h1`
 
 const SubTitle = styled.h2`
   font-size: 2.5rem;
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.primary.main.color};
   margin: 1% 0 5% 0;
   text-shadow: 3px 2px #000000;
   padding: 10px 10px 10px 10px;
