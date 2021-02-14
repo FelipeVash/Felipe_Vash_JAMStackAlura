@@ -57,7 +57,6 @@ MenuWrapper.CentralSide = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 17px;
   border-top: 1px solid #88989E;
   border-bottom: 1px solid #88989E;
   padding: 12px;
