@@ -1,6 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Image from 'next/image';
+import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 
 const imgUrl = require("../../../../public/images/logo.jpeg").default;
 
@@ -16,6 +17,22 @@ const FooterWrapper = styled.footer`
       opacity: .5;
     }
   }
+  ${breakpointsMedia({
+    md: css`
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      padding: 0 16px;
+      max-width: 1024px;
+    `,
+    lg: css`
+      max-width: 1160px; 
+    `,
+    xl: css`
+      max-width: 1222px;
+    `,
+  })}
 `;
 
 export default function Footer(props) {

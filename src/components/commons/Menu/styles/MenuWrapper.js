@@ -19,39 +19,22 @@ export const MenuWrapper = styled.nav`
       margin-right: auto;
       width: 100%;
       padding: 0 16px;
-/*       max-width: 1024px; */
+      max-width: 1024px;
     `,
     lg: css`
-/*       max-width: 1160px;  */
+      max-width: 1160px; 
     `,
     xl: css`
-/*       max-width: 1222px; */
+      max-width: 1920px;
     `,
   })}
 `;
 
-MenuWrapper.LeftSide = styled.div`
-  padding: 0;
-  margin: 0;
-  order: 1;
-  ${breakpointsMedia({
-    md: css`
-        width: 420px;
-        height: 32px;
-      `,
-  })}
-  ${breakpointsMedia({
-    md: css`
-      order: initial;
-      padding-right: 16px;
-    `,
-  })}
-`;
 
 MenuWrapper.CentralSide = styled.div`
   padding: 0;
   margin: 0;
-  order: 3;
+  order: 1;
   width: 100%;
   list-style: none;
   display: flex;
@@ -63,7 +46,7 @@ MenuWrapper.CentralSide = styled.div`
   
   ${breakpointsMedia({
     md: css`
-/*       max-width: 332px; */
+      max-width: 332px;
       justify-content: space-evenly;
       flex: 1;
       order: initial;
@@ -94,18 +77,4 @@ MenuWrapper.CentralSide = styled.div`
       
     }
   }
-`;
-
-MenuWrapper.RightSide = styled.div`
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex: 1;
-  order: 2;
-  justify-content: flex-end;
-  ${breakpointsMedia({
-    md: css`
-      order: initial;
-    `,
-  })}
 `;

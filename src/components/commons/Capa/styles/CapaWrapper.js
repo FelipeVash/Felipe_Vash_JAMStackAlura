@@ -1,16 +1,33 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
 
 export const CapaWrapper = styled.div`
   display:flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   background-image: url(${(props)=>props.imgUrl});
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
+
+  ${breakpointsMedia({
+    md: css`
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      padding: 0 16px;
+      max-width: 1024px;
+    `,
+    lg: css`
+      max-width: 1160px; 
+    `,
+    xl: css`
+      max-width: 1920px;
+    `,
+  })}
 `;
 
 export default CapaWrapper;

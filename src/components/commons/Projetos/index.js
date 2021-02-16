@@ -1,17 +1,42 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Projeto from '../Projeto/index.js';
 import ProjetosWrapper from './styles/ProjetosWrapper.js';
+import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 
 const Title = styled.h2`
-    font-size:2rem;
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-left: 28px;
+    padding-right: 28px;
     color: ${({ theme }) => theme.colors.primary.main.color};
     text-shadow: 3px 2px #000000;
-    text-align: center;
-    background-color: #595959;
-    padding-top: 40px;
-    padding-bottom: 10px;
-    margin:0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:0;
+    margin-bottom:0;
+    padding: 12px;
+    background-color:#292929;
+    width:100%;
+
+    ${breakpointsMedia({
+    md: css`
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      width:100%;
+      max-width: 1024px;
+    `,
+    lg: css`
+      max-width: 1160px; 
+    `,
+    xl: css`
+      max-width: 1920px;
+    `,
+  })}
 `;
 
 export default function Projetos() {
@@ -19,9 +44,9 @@ export default function Projetos() {
         <>
             <Title>MEUS PROJETOS</Title>
             <ProjetosWrapper>
-                <Projeto/>
-                <Projeto/>
-                <Projeto/>
+              <Projeto/>
+              <Projeto/>
+              <Projeto/>
             </ProjetosWrapper>
         </>
     )

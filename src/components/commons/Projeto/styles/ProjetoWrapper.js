@@ -11,7 +11,8 @@ const ProjetoWrapper = styled.div`
     background-color: #ffffff;
     width:200px;
     height: 300px;
-    margin: 10px 10px 10px 10px;
+    margin: 10px 10px 20px 10px;
+    border-radius: 5%;
 
     a{
         text-align: center;
