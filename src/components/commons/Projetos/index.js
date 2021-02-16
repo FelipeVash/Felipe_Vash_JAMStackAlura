@@ -19,7 +19,7 @@ const Title = styled.h2`
     margin-top:0;
     margin-bottom:0;
     padding: 12px;
-    background-color:#292929;
+    background-color:#191919E6;
     width:100%;
 
     ${breakpointsMedia({

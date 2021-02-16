@@ -8,12 +8,12 @@ const ProjetoWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: #ffffff;
+    background-color: #ffffffE6;
     width:200px;
     height: 300px;
     margin: 10px 10px 20px 10px;
     border-radius: 5%;
-
+    box-shadow: 1px 1px 10px 5px black;
     a{
         text-align: center;
         display: block;

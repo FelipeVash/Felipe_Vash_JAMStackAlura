@@ -16,13 +16,24 @@ const SiteWrapper = styled.div`
   background-position: fill;
 `;
 
+const ConteudoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 90%;
+`;
+
 export default function Home() {
   return (
     <SiteWrapper>
-      <Capa />
-      <Menu />
-      <Projetos />
-      <Footer />
+      <ConteudoWrapper>
+        <Capa />
+        <Menu />
+        <Projetos />
+        <Footer />
+      </ConteudoWrapper>
     </SiteWrapper>
   )
 };

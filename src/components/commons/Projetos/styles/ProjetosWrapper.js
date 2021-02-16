@@ -10,7 +10,7 @@ export const ProjetosWrapper = styled.div`
     padding: 10px 0px 10px 0px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #292929;
+    background-color: #191919E6;
     width: 100%;
 
     ${breakpointsMedia({
@@ -27,7 +27,14 @@ export const ProjetosWrapper = styled.div`
     xl: css`
       max-width: 1820px;
     `,
-  })}
+    })}
+
+    div{
+      transition: .3s;
+      &:hover,
+      &:focus {
+        opacity: .7;
+    }}
 `;
 
 export default ProjetosWrapper;

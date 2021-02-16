@@ -10,14 +10,16 @@ const Title = styled.h1`
   margin: 5% 0 0 0;
   text-shadow: 3px 2px #000000;
   padding: 10px 10px 10px 10px;
+  transform: rotate(-7deg)
 `;
 
 const SubTitle = styled.h2`
   font-size: 2.5rem;
   color: ${({ theme }) => theme.colors.primary.main.color};
-  margin: 1% 0 5% 0;
+  margin: 1% 0 3% 0;
   text-shadow: 3px 2px #000000;
   padding: 10px 10px 10px 10px;
+  transform: rotate(-7deg)
 `;
 
 export default function Capa() {

@@ -39,14 +39,14 @@ MenuWrapper.CentralSide = styled.div`
   list-style: none;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   border-top: 1px solid #88989E;
   border-bottom: 1px solid #88989E;
   padding: 12px;
   
   ${breakpointsMedia({
     md: css`
-      max-width: 332px;
+      max-width: 55%;
       justify-content: space-evenly;
       flex: 1;
       order: initial;
