@@ -10,6 +10,8 @@ const FooterWrapper = styled.footer`
   align-items: center;
   justify-content: center;
   background-color:#000000;
+  width: 100%;
+  border-radius: 0px 0px 30px 30px;
   a {
     transition: .3s;
     &:hover,
@@ -30,7 +32,7 @@ const FooterWrapper = styled.footer`
       max-width: 1160px; 
     `,
     xl: css`
-      max-width: 1222px;
+      max-width: 1820px;
     `,
   })}
 `;

@@ -34,7 +34,7 @@ const Title = styled.h2`
       max-width: 1160px; 
     `,
     xl: css`
-      max-width: 1920px;
+      max-width: 1820px;
     `,
   })}
 `;

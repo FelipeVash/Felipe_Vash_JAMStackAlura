@@ -10,6 +10,8 @@ export const CapaWrapper = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin-top:35px;
+  border-radius: 30px 30px 0 0;
   width: 100%;
 
   ${breakpointsMedia({
@@ -25,7 +27,7 @@ export const CapaWrapper = styled.div`
       max-width: 1160px; 
     `,
     xl: css`
-      max-width: 1920px;
+      max-width: 1820px;
     `,
   })}
 `;
