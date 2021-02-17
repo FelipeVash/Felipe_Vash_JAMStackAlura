@@ -50,6 +50,8 @@ export const colors = {
       md: 768, // medium
       lg: 992, // large
       xl: 1200, // extra large
+      xxl: 1820,
+      uhd: 2160, //4k tv
     },
     borderRadius: '8px',
     transition: '200ms ease-in-out',

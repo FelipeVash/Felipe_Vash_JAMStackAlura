@@ -12,6 +12,8 @@ export const MenuWrapper = styled.nav`
   padding-right: 28px;
   background-color: #000000;
   width:100%;
+  border-bottom: 5px groove #4dffff;
+  border-top: 5px groove #4dffff;
   ${breakpointsMedia({
     md: css`
       justify-content: center;

@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
 
-export const CapaWrapper = styled.div`
+const CapaWrapper = styled.div`
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -12,6 +12,7 @@ export const CapaWrapper = styled.div`
   background-size: cover;
   border-radius: 30px 30px 0 0;
   width: 100%;
+  min-height: 250px;
 
   ${breakpointsMedia({
     md: css`
@@ -21,9 +22,11 @@ export const CapaWrapper = styled.div`
       width: 100%;
       padding: 0 16px;
       max-width: 1024px;
+      min-height: 300px;
     `,
     lg: css`
       max-width: 1160px; 
+      min-height: 350px;
     `,
     xl: css`
       max-width: 1820px;
