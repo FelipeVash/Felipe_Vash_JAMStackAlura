@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import Projeto from '../Projeto/index.js';
+import Projetos from '../Projeto/index.js';
 import ProjetosWrapper from './styles/ProjetosWrapper.js';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 
@@ -39,14 +39,12 @@ const Title = styled.h2`
   })}
 `;
 
-export default function Projetos() {
+export default function Conteudo() {
     return (
         <>
             <Title>MEUS PROJETOS</Title>
             <ProjetosWrapper>
-              <Projeto/>
-              <Projeto/>
-              <Projeto/>
+              <Projetos/>
             </ProjetosWrapper>
         </>
     )

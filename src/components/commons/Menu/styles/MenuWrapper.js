@@ -74,9 +74,7 @@ MenuWrapper.CentralSide = styled.div`
   })}
     &:hover,
     &:focus {
-      font-weight: 500;
-      color: #00ffff;
-      
+      color: #ff0066;
     }
   }
 `;

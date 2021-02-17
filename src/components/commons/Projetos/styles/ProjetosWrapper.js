@@ -33,6 +33,7 @@ export const ProjetosWrapper = styled.div`
       transition: .3s;
       &:hover,
       &:focus {
+        cursor:pointer;
         opacity: .7;
     }}
 `;
