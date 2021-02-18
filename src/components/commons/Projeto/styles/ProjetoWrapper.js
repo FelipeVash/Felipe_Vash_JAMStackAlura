@@ -11,9 +11,9 @@ const ProjetoWrapper = styled.div`
     display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: #ffffffE6;
-    width:200px;
+    width:300px;
     height: 300px;
     margin: 10px 10px 20px 10px;
     border-radius: 5%;
@@ -36,11 +36,12 @@ const ProjetoWrapper = styled.div`
 `;
 
 const ProjetoImage = styled.img`
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px groove #ff0066;
-    margin-bottom: 10px;
+    display:flex;
+    align-self: center;
+    width: 90%;
+    height: 90%;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 10px 2px black;
 `;
 
 const ProjetoNome = styled.p`
@@ -60,12 +61,12 @@ export default function ProjetoCard() {
     return (
         <>
             {[
-                { url: '/projeto1', name: 'Projeto1', src: imgUrl1 },
-                { url: '/projeto2', name: 'Projeto2', src: imgUrl2 },
-                { url: '/projeto3', name: 'Projeto3', src: imgUrl3 },
+                { url: 'https://instalura-base-mixqs2ce1.vercel.app', name: 'Instalura', src: imgUrl1 },
+                { url: 'https://dbzquiz.felipevash.vercel.app/', name: 'DBZQuiz', src: imgUrl2 },
+                { url: 'https://github.com/FelipeVash', name: 'Perfil GitHub', src: imgUrl3 },
             ].map((link) => (
-                <ProjetoWrapper>
-                    <a key={link.url} href={link.url}>
+                <ProjetoWrapper key={link.url}>
+                    <a href={link.url}>
                         <ProjetoImage src={link.src} />
                         <ProjetoNome>
                             {link.name}
