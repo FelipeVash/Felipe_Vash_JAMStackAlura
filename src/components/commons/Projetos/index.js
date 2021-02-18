@@ -18,8 +18,9 @@ const Title = styled.h2`
     margin-right: auto;
     margin-top:0;
     margin-bottom:0;
-    padding: 12px;
+    padding: 30px 0 0 0;
     background-color:#191919E6;
+    text-shadow: 10px 10px 10px 10px black;
     width:100%;
 
     ${breakpointsMedia({

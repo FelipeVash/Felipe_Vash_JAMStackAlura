@@ -12,6 +12,7 @@ export const ProjetosWrapper = styled.div`
     margin-right: auto;
     background-color: #191919E6;
     width: 100%;
+    height:100%;
 
     ${breakpointsMedia({
     md: css`
@@ -28,14 +29,6 @@ export const ProjetosWrapper = styled.div`
       max-width: 1820px;
     `,
     })}
-
-    div{
-      transition: .3s;
-      &:hover,
-      &:focus {
-        cursor:pointer;
-        opacity: .7;
-    }}
 `;
 
 export default ProjetosWrapper;

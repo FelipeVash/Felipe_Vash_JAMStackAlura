@@ -13,17 +13,24 @@ const ProjetoWrapper = styled.div`
     align-items: center;
     justify-content: space-evenly;
     background-color: #ffffffE6;
-    width:300px;
-    height: 300px;
-    margin: 10px 10px 20px 10px;
+    width:20%;
+    height: 90%;
+    margin: 10px 20px 20px 20px;
     border-radius: 5%;
     border: 2px groove #4dffff;
     box-shadow: 1px 1px 10px 5px black;
+    transition: .3s;
+    &:hover,
+    &:focus {
+        cursor:pointer;
+        opacity: .7;
+    }
     a{
         display: flex;
+        width:95%;
         flex-direction: column;
         text-decoration: none;
-        transition: 200ms ease-in-out;
+        transition: .3s;
         ${breakpointsMedia({
             xs: css`
         ${TextStyleVariants.smallestException}
@@ -32,6 +39,11 @@ const ProjetoWrapper = styled.div`
         ${TextStyleVariants.paragraph1}
         `,
         })}
+        &:hover,
+        &:focus {
+            cursor:pointer;
+            width:100%;
+    }
     }
 `;
 
@@ -39,8 +51,8 @@ const ProjetoImage = styled.img`
     display:flex;
     align-self: center;
     width: 90%;
-    height: 90%;
-    margin-bottom: 20px;
+    height: 100%;
+    margin-bottom: 40px;
     box-shadow: 1px 1px 10px 2px black;
 `;
 
@@ -50,6 +62,7 @@ const ProjetoNome = styled.p`
     color: #ff0066;
     text-align: center;
     padding: 0px 10px 0px 10px;
+    text-shadow: 10px 10px 10px 10px black;
     margin:0;
 `;
 
