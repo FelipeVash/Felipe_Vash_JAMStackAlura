@@ -77,15 +77,18 @@ const ProjetoImage = styled.img`
     max-width: 500px;
     margin:10px;
     box-shadow: 1px 1px 10px 2px black;
+    border-radius: 15px;
 `;
 
 const ProjetoNome = styled.p`
-    color: #7a003c;
+    color: white;
     font-size:1.5rem;
     font-weight:500;
     margin:5px;
     text-align: center;
     width:100%;
+    background-color:#0000007a;
+    border-radius: 15px;
 `;
 
 
