@@ -80,7 +80,7 @@ const ProjetoImage = styled.img`
 `;
 
 const ProjetoNome = styled.p`
-    color: #7a0099;
+    color: #7a003c;
     font-size:1.5rem;
     font-weight:500;
     margin:5px;
