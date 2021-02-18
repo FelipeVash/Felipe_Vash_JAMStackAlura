@@ -10,6 +10,7 @@ const imgUrl = require("../public/images/fundo.jpg").default;
 const SiteWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  width:100%;
   min-height: 100vh;
   align-items: center;
   background-image: url(${imgUrl});
@@ -22,7 +23,7 @@ const ConteudoWrapper = styled.div`
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  width: 90%;
+  width: 100%;
 `;
 
 export default function Home() {

@@ -16,7 +16,6 @@ const ProjetoWrapper = styled.div`
     width:20%;
     height: 90%;
     margin: 10px 20px 20px 20px;
-    padding: 10px;
     border-radius: 5%;
     border: 2px groove #4dffff;
     box-shadow: 1px 1px 10px 5px black;
