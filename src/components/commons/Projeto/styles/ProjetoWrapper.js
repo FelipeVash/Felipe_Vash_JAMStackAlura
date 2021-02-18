@@ -8,18 +8,41 @@ const imgUrl2 = require("../../../../../public/images/projetoteste2.png").defaul
 const imgUrl3 = require("../../../../../public/images/projetoteste3.jpg").default;
 
 const ProjetoWrapper = styled.div`
-    display:flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
     background-color: #ffffffE6;
-    width:20%;
-    height: 90%;
-    margin: 10px 20px 20px 20px;
-    border-radius: 5%;
     border: 2px groove #4dffff;
+    border-radius: 5%;
     box-shadow: 1px 1px 10px 5px black;
+    display:flex;
+    flex-direction:column;
+    margin:10px 10px 20px 10px;
+    max-width:350px;
+    min-width:280px;
+    min-height:180px;
+    max-height:350px;
     transition: .3s;
+    padding:20px;
+    width:100%;
+    ${breakpointsMedia({
+        sm: css`
+            max-width:400px;
+        `,
+        md: css`
+            max-width:600px;
+        `,
+        lg: css`
+            max-width:280px;
+        `,
+        xl: css`
+            max-width:350px;
+        `,
+        xxl: css`
+            max-width:500px;
+        `,
+        uhd: css`
+            max-width:550px;
+        `,
+        })}
     &:hover,
     &:focus {
         cursor:pointer;
@@ -27,8 +50,10 @@ const ProjetoWrapper = styled.div`
     }
     a{
         display: flex;
-        width:95%;
         flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width:95%;
         text-decoration: none;
         transition: .3s;
         ${breakpointsMedia({
@@ -43,27 +68,24 @@ const ProjetoWrapper = styled.div`
         &:focus {
             cursor:pointer;
             width:100%;
-    }
+        }
     }
 `;
 
 const ProjetoImage = styled.img`
-    display:flex;
-    align-self: center;
-    width: 90%;
-    height: 100%;
-    margin-bottom: 40px;
+    width:100%;
+    max-width: 500px;
+    margin:10px;
     box-shadow: 1px 1px 10px 2px black;
 `;
 
 const ProjetoNome = styled.p`
+    color: #7a0099;
     font-size:1.5rem;
     font-weight:500;
-    color: #7a0099;
+    margin:5px;
     text-align: center;
-    padding: 0px 10px 0px 10px;
-    text-shadow: 10px 10px 10px 10px black;
-    margin:0;
+    width:100%;
 `;
 
 

@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
   html, body {
     display: flex;
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
   }
   #__next {
     flex: 1;

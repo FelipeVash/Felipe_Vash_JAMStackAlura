@@ -4,8 +4,7 @@ import { MenuWrapper } from './styles/MenuWrapper';
 
 export default function Menu() {
   return (
-    <MenuWrapper>
-      <MenuWrapper.CentralSide as="ul"> {/* MenuWrapper.CentralSide */}
+    <MenuWrapper as="ul">
         {[
           { url: '/', name: 'Home' },
           { url: '/sobre', name: 'Sobre Mim' },
@@ -17,7 +16,6 @@ export default function Menu() {
             </Text>
           </li>
         ))}
-      </MenuWrapper.CentralSide>
     </MenuWrapper>
   );
 }

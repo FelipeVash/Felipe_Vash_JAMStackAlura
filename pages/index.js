@@ -8,13 +8,15 @@ import Conteudo from '../src/components/commons/Projetos';
 const imgUrl = require("../public/images/fundo.jpg").default;
 
 const SiteWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width:100%;
-  min-height: 100vh;
   align-items: center;
   background-image: url(${imgUrl});
-  background-position: fill;
+  background-position: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height: 100vh;
+  width:100%;
 `;
 
 const ConteudoWrapper = styled.div`
@@ -23,7 +25,7 @@ const ConteudoWrapper = styled.div`
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  width: 100%;
+  width: 95vw;
 `;
 
 export default function Home() {

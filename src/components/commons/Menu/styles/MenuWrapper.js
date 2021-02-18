@@ -6,61 +6,33 @@ export const MenuWrapper = styled.nav`
   font-family: 'Rubik', sans-serif;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  list-style-type: none;
   flex-wrap: wrap;
-  padding-left: 28px;
-  padding-right: 28px;
+  padding:10px 28px 10px 28px;
   background-color: #000000;
+  margin:0;
   width:100%;
   border-bottom: 5px groove #4dffff;
   border-top: 5px groove #4dffff;
   ${breakpointsMedia({
+    sm: css`
+    `,
     md: css`
-      justify-content: center;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-      padding: 0 16px;
-      max-width: 1024px;
     `,
     lg: css`
-      max-width: 1160px; 
     `,
     xl: css`
-      max-width: 1820px;
     `,
-  })}
-`;
-
-
-MenuWrapper.CentralSide = styled.div`
-  padding: 0;
-  margin: 0;
-  order: 1;
-  width: 100%;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  border-top: 1px solid #88989E;
-  border-bottom: 1px solid #88989E;
-  padding: 12px;
-  
-  ${breakpointsMedia({
-    md: css`
-      max-width: 55%;
-      justify-content: space-evenly;
-      flex: 1;
-      order: initial;
-      border: none;
-      margin: 0;
-      padding-top: 10px;
-      padding-bottom: 10px;
+    xxl: css`
+    `,
+    uhd: css`
     `,
   })}
   a {
     text-align: center;
-    display: block;
+    display: flex;
+    align-items:center;
     text-decoration: none;
     color: #FFFFFF;
     transition: 200ms ease-in-out;
@@ -71,7 +43,16 @@ MenuWrapper.CentralSide = styled.div`
     md: css`
       ${TextStyleVariants.paragraph1}
     `,
-  })}
+    lg: css`
+    `,
+    xl: css`
+    `,
+    xxl: css`
+    `,
+    uhd: css`
+      font-size:20px;
+    `,
+    })}
     &:hover,
     &:focus {
       color: #ff0066;

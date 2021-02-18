@@ -12,24 +12,23 @@ const CapaWrapper = styled.div`
   background-size: cover;
   border-radius: 30px 30px 0 0;
   width: 100%;
-  min-height: 250px;
+  min-height: 25vh;
+  justify-content: center;
 
   ${breakpointsMedia({
+    sm: css`
+    `,
     md: css`
-      justify-content: center;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-      padding: 0 16px;
-      max-width: 1024px;
-      min-height: 300px;
     `,
     lg: css`
-      max-width: 1160px; 
-      min-height: 350px;
+      min-height: 30vh;
     `,
     xl: css`
-      max-width: 1820px;
+    `,
+    xxl: css`
+      min-height: 35vh;
+    `,
+    uhd: css`
     `,
   })}
 `;

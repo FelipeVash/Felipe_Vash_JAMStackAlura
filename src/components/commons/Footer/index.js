@@ -21,18 +21,10 @@ const FooterWrapper = styled.footer`
   }
   ${breakpointsMedia({
     md: css`
-      justify-content: center;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-      padding: 0 16px;
-      max-width: 1024px;
     `,
     lg: css`
-      max-width: 1160px; 
     `,
     xl: css`
-      max-width: 1820px;
     `,
   })}
 `;

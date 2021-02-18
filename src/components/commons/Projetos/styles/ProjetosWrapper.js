@@ -7,27 +7,27 @@ export const ProjetosWrapper = styled.div`
     align-items: center;
     flex-wrap:wrap;
     justify-content: space-evenly;
-    padding: 10px 0px 10px 0px;
     margin-left: auto;
     margin-right: auto;
+    padding:0 20px 0 20px;
     background-color: #191919E6;
     width: 100%;
-    height:100%;
+    min-height: 30vh;
 
     ${breakpointsMedia({
-    md: css`
-      justify-content: center;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-      max-width: 1024px;
-    `,
-    lg: css`
-      max-width: 1160px; 
-    `,
-    xl: css`
-      max-width: 1820px;
-    `,
+      sm: css`
+      `,
+      md: css`
+
+      `,
+      lg: css`
+      `,
+      xl: css`
+      `,
+      xxl: css`
+      `,
+      uhd: css`
+      `,
     })}
 `;
 
