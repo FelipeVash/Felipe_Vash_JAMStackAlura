@@ -38,6 +38,7 @@ export default function Footer(props) {
             src={imgUrl}
             width={150}
             height={150}
+            alt='Logotipo de Felipe Vash - WebCraft com link para o GitHub'
         />
       </a>
     </FooterWrapper>

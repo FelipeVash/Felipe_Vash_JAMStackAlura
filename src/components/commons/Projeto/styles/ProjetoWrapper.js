@@ -7,7 +7,7 @@ const imgUrl1 = require("../../../../../public/images/projetoteste.jpg").default
 const imgUrl2 = require("../../../../../public/images/projetoteste2.png").default;
 const imgUrl3 = require("../../../../../public/images/projetoteste3.jpg").default;
 
-const ProjetoWrapper = styled.div`
+export const ProjetoWrapper = styled.div`
     align-items: center;
     background-color: #ffffffE6;
     border: 2px groove #4dffff;
@@ -91,18 +91,16 @@ const ProjetoNome = styled.p`
 
 
 export default function ProjetoCard() {
-    
-
     return (
         <>
             {[
-                { url: 'https://instalura-base-mixqs2ce1.vercel.app', name: 'Instalura', src: imgUrl1 },
-                { url: 'https://dbzquiz.felipevash.vercel.app/', name: 'DBZQuiz', src: imgUrl2 },
-                { url: 'https://github.com/FelipeVash', name: 'Perfil GitHub', src: imgUrl3 },
+                { url: 'https://instalura-base-mixqs2ce1.vercel.app', name: 'Instalura', src: imgUrl1, alt: 'Foto do projeto Instalura' },
+                { url: 'https://dbzquiz.felipevash.vercel.app/', name: 'DBZQuiz', src: imgUrl2, alt: 'Foto do projeto DBZ-Quiz' },
+                { url: 'https://github.com/FelipeVash', name: 'Perfil GitHub', src: imgUrl3, alt: 'Foto do projeto do Perfil GitHub' },
             ].map((link) => (
                 <ProjetoWrapper key={link.url}>
                     <a href={link.url}>
-                        <ProjetoImage src={link.src} />
+                        <ProjetoImage src={link.src} alt={link.alt}/>
                         <ProjetoNome>
                             {link.name}
                         </ProjetoNome>

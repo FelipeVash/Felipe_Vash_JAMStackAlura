@@ -17,7 +17,7 @@ const LogoImagem = styled.img`
 export default function Logo() {
     return (
         <LogoWrapper>
-            <LogoImagem src={logoUrl}/>
+            <LogoImagem src={logoUrl} alt='Logotipo de Felipe Vash - WebCraft'/>
         </LogoWrapper>
     )
 };
