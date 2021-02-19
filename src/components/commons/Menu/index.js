@@ -8,7 +8,7 @@ export default function Menu() {
         {[
           { url: '/', name: 'Home' },
           { url: '/sobre', name: 'Sobre Mim' },
-          { url: '/contato', name: 'Contato' },
+          { url: 'https://www.linkedin.com/in/felipevash/', name: 'Linkedin' },
         ].map((link) => (
           <li key={link.url}>
             <Text variant="smallestException" tag="a" href={link.url}>
