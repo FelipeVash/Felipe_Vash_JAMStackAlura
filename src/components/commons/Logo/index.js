@@ -1,17 +1,32 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 import LogoWrapper from './styles/LogoWrapper';
 
 const logoUrl = require("../../../../public/images/logo.jpeg").default;
 
 const LogoImagem = styled.img`
     min-width: 150px;
-    width: 12%;
+    width: 10%;
+    margin:15px;
     align-self:center;
     border-radius: 50%;
     border: 8px groove #4dffff;
-    margin-right: 15px;
-    margin-top: 15px;
+    ${breakpointsMedia({
+        sm: css`
+        `,
+        md: css`
+        `,
+        lg: css`
+        `,
+        xl: css`
+            width:12%;
+        `,
+        xxl: css`
+        `,
+        uhd: css`
+        `,
+  })}
 `;
 
 export default function Logo() {

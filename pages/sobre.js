@@ -4,7 +4,8 @@ import Capa from '../src/components/commons/Capa';
 import Footer from '../src/components/commons/Footer';
 import Menu from '../src/components/commons/Menu';
 import { breakpointsMedia } from '../src/theme/utils/breakpointsMedia';
-import { ProjetoWrapper } from '../src/components/commons/Projeto/styles/ProjetoWrapper';
+import { Card } from '../src/components/commons/Card';
+import propToStyle from '../src/theme/utils/propToStyle';
 
 const imgUrl = require("../public/images/fundo.jpg").default;
 const fotoUrl = require("../public/images/foto.jpg").default;
@@ -138,7 +139,7 @@ export default function Sobre() {
         <Menu />
         <Conteudo>
             <SobreTexto>Sobre Mim</SobreTexto>
-            <ProjetoWrapper>
+            <Card>
                     <img src={fotoUrl} alt='Foto do Felipe Vash'/>
                     <p>Com experiência em TI desde muito jovem, ganhador de bolsa de estudos integral, estudei WebDevelopment, Design Gráfico e Arquitetura de Rede ao longo dos anos e cresci em ambiente full tech, sempre pesquisando em todas as mídias.
                         Nasci na época do crescimento da internet e cresci na época da grande transição.
@@ -147,7 +148,7 @@ export default function Sobre() {
                         Movido pelo objetivo de acesso pleno e democrático a tecnologia, foco meus projetos tanto em desempenho, estética, responsividade quanto em acessibilidade para todas as pessoas.
                         Estudante ávido em busca constante de aperfeiçoamento e de novos conhecimentos e habilidades.
                     </p>
-            </ProjetoWrapper>
+            </Card>
         </Conteudo>
         <Footer />
       </ConteudoWrapper>

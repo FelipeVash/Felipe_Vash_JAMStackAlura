@@ -8,24 +8,23 @@ import Conteudo from '../src/components/commons/Projetos';
 const imgUrl = require("../public/images/fundo.jpg").default;
 
 const SiteWrapper = styled.div`
-  align-items: center;
+  align-items:center;
   background-image: url(${imgUrl});
   background-position: cover;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction:column;
+  display:flex;
   justify-content:center;
-  min-height: 100vh;
-  width:100%;
+  height: 100%;
+  width:100vw;
+  padding:1%;
 `;
 
 const ConteudoWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  width: 95vw;
+  height: 100%;
+  width: 100%;
 `;
 
 export default function Home() {

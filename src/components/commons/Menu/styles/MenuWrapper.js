@@ -15,20 +15,6 @@ export const MenuWrapper = styled.nav`
   width:100%;
   border-bottom: 5px groove #4dffff;
   border-top: 5px groove #4dffff;
-  ${breakpointsMedia({
-    sm: css`
-    `,
-    md: css`
-    `,
-    lg: css`
-    `,
-    xl: css`
-    `,
-    xxl: css`
-    `,
-    uhd: css`
-    `,
-  })}
   a {
     text-align: center;
     display: flex;
