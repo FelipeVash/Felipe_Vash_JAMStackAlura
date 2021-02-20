@@ -20,11 +20,8 @@ const ProjetoNome = styled.p`
     margin:5px;
     text-align: center;
     width:100%;
-    background-color:#0000009a;
     border-radius: 15px;
-    border: 2px groove #4dffff;
-    text-shadow: 2px 2px black;
-    box-shadow: 1px 1px 10px 2px black;
+    text-shadow: 2px 1px black;
 `;
 
 export default function ProjetoCard() {

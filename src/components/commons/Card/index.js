@@ -6,14 +6,13 @@ import { TextStyleVariants } from '../../foundation/Text';
 export const Card = styled.div`
     align-items: center;
     background-color: #ffffffE6;
-    border: 2px groove #4dffff;
     border-radius: 5%;
     box-shadow: 1px 1px 10px 5px black;
     display:flex;
     flex-direction:column;
     justify-content:space-evenly;
     margin: 10px;
-    padding: 30px;
+    padding: 15px;
     transition: .3s;
     width: 100%;
     ${breakpointsMedia({
@@ -40,44 +39,37 @@ export const Card = styled.div`
         })}
     &:hover,
     &:focus {
+        box-shadow: 1px 1px 10px 10px black;
         cursor:pointer;
-        opacity: .7;
-        border: 2px groove #ff0066;
+        transform: scale(1.05);
+        a{
+            cursor:pointer;
+            border: 3px groove #ff0066;
+        }
     }
     a{
-        display: flex;
-        flex-direction: column;
         align-items: center;
+        display: flex;
+        background-color:#000000CC;
+        border: 3px groove #4dffff;
+        border-radius:15px;
+        box-shadow: 1px 1px 10px 2px black;
+        flex-direction: column;
         justify-content: space-evenly;
-        width:100%;
+        padding:5px;
         text-decoration: none;
         transition: .3s;
+        width:100%;
         ${breakpointsMedia({
         xs: css`
             ${TextStyleVariants.smallestException}
         `,
-        sm: css`
-        `,
         md: css`
             ${TextStyleVariants.paragraph1}
-        `,
-        lg: css`
         `,
         xl: css`
             width:100%;
         `,
-        xxl: css`
-        `,
-        uhd: css`
-        `,
         })}
-        &:hover,
-        &:focus {
-            cursor:pointer;
-            transform: scale(1.05);
-            p{
-                border: 2px groove #ff0066;
-            }
-        }
     }
 `;
