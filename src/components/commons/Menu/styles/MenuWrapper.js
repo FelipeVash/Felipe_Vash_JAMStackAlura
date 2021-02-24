@@ -39,6 +39,7 @@ export const MenuWrapper = styled.nav`
       font-size:20px;
     `,
     })}
+    cursor: pointer;
     &:hover,
     &:focus {
       color: #ff0066;

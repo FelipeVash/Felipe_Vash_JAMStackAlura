@@ -24,7 +24,7 @@ export const Card = styled.div`
         `,
         lg: css`
             max-width:600px;
-            min-height:350px;
+            min-height:200px;
         `,
         xl: css`
             max-width:350px;
