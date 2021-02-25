@@ -25,7 +25,7 @@ export default function Sobre() {
             <SobreTexto>SOBRE MIM</SobreTexto>
             <Card>
                 <img src={fotoUrl} alt='Foto do Felipe Vash'/>
-                <Text variant='paragraph1' margin='20px'>
+                <Text as='p' variant='paragraph1' margin='20px'>
                     Com experiência em TI desde muito jovem, ganhador de bolsa de estudos integral, estudei WebDevelopment, Design Gráfico e Arquitetura de Rede ao longo dos anos e cresci em ambiente full tech, sempre pesquisando em todas as mídias.
                     Nasci na época do crescimento da internet e cresci na época da grande transição.
                     Tenho total experiência em todas as plataformas Windows, MacOS e Linux Ubuntu.
