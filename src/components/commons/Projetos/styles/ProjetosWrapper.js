@@ -1,6 +1,4 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
-import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
+import styled from 'styled-components';
 
 export const ProjetosWrapper = styled.main`
     display:flex;

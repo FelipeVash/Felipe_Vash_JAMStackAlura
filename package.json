@@ -5,7 +5,8 @@
     "dev": "next dev -p 3000",
     "build": "next build",
     "export": "next build && next export",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
     "next": "latest",
@@ -17,6 +18,8 @@
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.8.0",
+    "eslint": "^7.20.0",
+    "eslint-plugin-react": "^7.22.0",
     "file-loader": "^6.2.0"
   },
   "license": "MIT"

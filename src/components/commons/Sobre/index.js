@@ -1,5 +1,6 @@
+/* eslint-disable no-undef */
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { Text } from '../../foundation/Text';
 import { SobreWrapper } from './styles/SobreWrapper';
 import { Card } from '../Card';

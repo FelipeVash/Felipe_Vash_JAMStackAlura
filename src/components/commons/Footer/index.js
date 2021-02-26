@@ -1,6 +1,7 @@
+/* eslint-disable no-undef */
 // eslint-disable-next-line react/jsx-props-no-spreading
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const TwitterIcon = require(`../../../../public/icons/Twitter.png`).default;
 const GitHubIcon = require(`../../../../public/icons/Github.png`).default;
