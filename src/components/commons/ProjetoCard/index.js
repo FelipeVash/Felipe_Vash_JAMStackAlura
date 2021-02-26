@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Card } from '../Card';
 
 const imgUrl1 = require("../../../../public/images/projetoteste.jpg").default;
-const imgUrl2 = require("../../../../public/images/projetoteste2.png").default;
+const imgUrl2 = require("../../../../public/images/projetoteste2.jpg").default;
 const imgUrl3 = require("../../../../public/images/projetoteste3.jpg").default;
 
 const ProjetoImage = styled.img`
@@ -24,9 +24,17 @@ const ProjetoNome = styled.p`
     text-shadow: 2px 1px black;
 `;
 
+const CardWrapper = styled.section`
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+`;
+
 export default function ProjetoCard() {
     return (
-        <>
+        <CardWrapper>
             {[
                 { url: 'https://instalura-base-mixqs2ce1.vercel.app', name: 'Instalura', src: imgUrl1, alt: 'Foto do projeto Instalura' },
                 { url: 'https://dbzquiz.felipevash.vercel.app/', name: 'DBZQuiz', src: imgUrl2, alt: 'Foto do projeto DBZ-Quiz' },
@@ -41,6 +49,6 @@ export default function ProjetoCard() {
                     </a>
                 </Card>
             ))}
-        </>
+        </CardWrapper>
     )
 }

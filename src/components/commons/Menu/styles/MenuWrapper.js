@@ -3,6 +3,14 @@ import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
 import { TextStyleVariants } from '../../../foundation/Text';
 
 export const MenuWrapper = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+`;
+
+
+export const MenuList = styled.ul`
   font-family: 'Rubik', sans-serif;
   display: flex;
   align-items: center;
@@ -15,7 +23,7 @@ export const MenuWrapper = styled.nav`
   width:100%;
   border-bottom: 5px groove #4dffff;
   border-top: 5px groove #4dffff;
-  a {
+  li a {
     text-align: center;
     display: flex;
     align-items:center;

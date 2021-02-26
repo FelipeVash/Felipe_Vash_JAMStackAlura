@@ -1,14 +1,13 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
-import LogoWrapper from './styles/LogoWrapper';
 
-const logoUrl = require("../../../../public/images/logo.jpeg").default;
+const logoUrl = require("../../../../public/images/logo.jpg").default;
 
 const LogoImagem = styled.img`
+    display:flex;
     min-width: 150px;
-    width: 10%;
-    margin:15px;
+    width:100%;
     align-self:center;
     border-radius: 50%;
     border: 8px groove #4dffff;
@@ -20,7 +19,6 @@ const LogoImagem = styled.img`
         lg: css`
         `,
         xl: css`
-            width:12%;
         `,
         xxl: css`
         `,
@@ -31,8 +29,6 @@ const LogoImagem = styled.img`
 
 export default function Logo() {
     return (
-        <LogoWrapper>
-            <LogoImagem src={logoUrl} alt='Logotipo de Felipe Vash - WebCraft'/>
-        </LogoWrapper>
+        <LogoImagem src={logoUrl} alt='Logotipo de Felipe Vash - WebCraft'/>
     )
 };

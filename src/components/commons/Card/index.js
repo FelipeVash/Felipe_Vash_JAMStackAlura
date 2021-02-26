@@ -3,10 +3,10 @@ import styled, { css }from 'styled-components';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 import { TextStyleVariants } from '../../foundation/Text';
 
-export const Card = styled.div`
+export const Card = styled.article`
     align-items: center;
     background-color: #ffffffE6;
-    border-radius: 5%;
+    border-radius: 15px;
     box-shadow: 1px 1px 10px 5px black;
     display:flex;
     flex-direction:column;
