@@ -33,6 +33,7 @@ export default class MyDocument extends Document {
         <Head>
           <meta name="robots" content="all" />
           <meta name="Description" content="Portfolio do desenvolvedor FrontEnd Felipe Vash."></meta>
+          <meta name="theme-color" content="#317EFB"/>
         </Head>
           <body>
             <Main />
