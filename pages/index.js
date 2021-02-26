@@ -18,9 +18,7 @@ export default function Home() {
         ].map((link) => (
           <li key={link.name}>
             <Link href={link.url} replace>
-              <a>
-                {link.name}
-              </a>
+              {link.name}
             </Link>
           </li>
         ))}

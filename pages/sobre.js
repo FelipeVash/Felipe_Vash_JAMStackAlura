@@ -6,7 +6,7 @@ import Menu from '../src/components/commons/Menu';
 import Sobre from '../src/components/commons/Sobre'
 import Footer from '../src/components/commons/Footer';
 
-export default function Home() {
+export default function SobreSite() {
   return (
     <Site>
       <Capa />
@@ -18,9 +18,7 @@ export default function Home() {
         ].map((link) => (
           <li key={link.name}>
             <Link href={link.url} replace>
-              <a>
-                {link.name}
-              </a>
+              {link.name}
             </Link>
           </li>
         ))}
