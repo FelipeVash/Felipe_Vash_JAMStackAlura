@@ -32,7 +32,7 @@ export default class MyDocument extends Document {
       <Html lang='pt-br'>
         <Head>
           <meta name="robots" content="all" />
-          <meta name="Portfolio FrontEnd de Felipe Vash" content="Portfolio do desenvolvedor FrontEnd Felipe Vash"></meta>
+          <meta name="Description" content="Portfolio do desenvolvedor FrontEnd Felipe Vash."></meta>
         </Head>
           <body>
             <Main />
