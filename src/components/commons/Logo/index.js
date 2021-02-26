@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 
-const logoUrl = require("../../../../public/images/logo.jpeg").default;
+const logoUrl = require("../../../../public/images/logo.jpg").default;
 
 const LogoImagem = styled.img`
     display:flex;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Card } from '../Card';
 
 const imgUrl1 = require("../../../../public/images/projetoteste.jpg").default;
-const imgUrl2 = require("../../../../public/images/projetoteste2.png").default;
+const imgUrl2 = require("../../../../public/images/projetoteste2.jpg").default;
 const imgUrl3 = require("../../../../public/images/projetoteste3.jpg").default;
 
 const ProjetoImage = styled.img`
