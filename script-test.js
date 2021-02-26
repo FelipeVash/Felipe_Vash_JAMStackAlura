@@ -3,4 +3,4 @@ const shell = require('shelljs');
 
 console.log('Ola mundo');
 
-shell.exec('git diff --name-only branch-scripts-teste..main')
+shell.exec('git diff --name-only')
