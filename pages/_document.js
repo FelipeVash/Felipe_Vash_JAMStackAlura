@@ -30,7 +30,10 @@ export default class MyDocument extends Document {
   render() {
     return(
       <Html lang='pt-br'>
-        <Head />
+        <Head>
+          <meta name="robots" content="all" />
+          <meta name="Portfolio FrontEnd de Felipe Vash" content="Portfolio do desenvolvedor FrontEnd Felipe Vash"></meta>
+        </Head>
           <body>
             <Main />
             <NextScript />
