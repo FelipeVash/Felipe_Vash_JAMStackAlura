@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Site } from '../src/components/commons/Site';
 import Capa from '../src/components/commons/Capa';
 import Menu from '../src/components/commons/Menu';
-import Conteudo from '../src/components/commons/Projetos';
+import Sobre from '../src/components/commons/Sobre'
 import Footer from '../src/components/commons/Footer';
 
 export default function Home() {
@@ -25,7 +25,7 @@ export default function Home() {
           </li>
         ))}
       </Menu>
-      <Conteudo />
+      <Sobre />
       <Footer />
     </Site>
   )
