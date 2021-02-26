@@ -1,29 +1,33 @@
 import React from 'react';
-import Link from 'next/link';
 import { Site } from '../src/components/commons/Site';
 import Capa from '../src/components/commons/Capa';
 import Menu from '../src/components/commons/Menu';
-import Sobre from '../src/components/commons/Sobre'
+import { Text } from '../src/components/foundation/Text';
+import Conteudo from '../src/components/commons/Projetos';
+import Sobre from '../src/components/commons/Sobre';
 import Footer from '../src/components/commons/Footer';
 
 export default function SobreSite() {
+  const [conteudo, setConteudo] = React.useState('sobre');
   return (
     <Site>
       <Capa />
       <Menu>
         {[
-          { url: '/', name: 'Home'},
-          { url: '/sobre', name: 'Sobre Mim'},
-          { url: 'https://www.linkedin.com/in/felipevash/', name: 'Linkedin'},
+          { name: 'Home', modo: 'home'},
+          { name: 'Sobre Mim', modo: 'sobre' },
+          { url: 'https://www.linkedin.com/in/felipevash/', name: 'Linkedin', modo: 'link' },
         ].map((link) => (
           <li key={link.name}>
-            <Link href={link.url}>
+            <Text variant="smallestException" tag="a" href={link.url} onClick={() => {setConteudo(link.modo)}}>
               {link.name}
-            </Link>
+            </Text>
           </li>
         ))}
       </Menu>
-      <Sobre />
+      {conteudo === 'home' && <Conteudo />}
+      {conteudo === 'sobre' && <Sobre />}
+      {conteudo === 'link' && <Sobre />}
       <Footer />
     </Site>
   )
