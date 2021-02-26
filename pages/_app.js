@@ -13,6 +13,7 @@ export default function App({ Component, pageProps }) {
           rel="stylesheet" defer
         />
         <meta name="robots" content="all" />
+        <meta name="Portfolio FrontEnd de Felipe Vash" content="Portfolio do desenvolvedor FrontEnd Felipe Vash"></meta>
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
