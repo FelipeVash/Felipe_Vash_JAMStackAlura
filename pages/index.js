@@ -17,7 +17,7 @@ export default function Home() {
           { url: 'https://www.linkedin.com/in/felipevash/', name: 'Linkedin'},
         ].map((link) => (
           <li key={link.name}>
-            <Link href={link.url} replace>
+            <Link href={link.url}>
               {link.name}
             </Link>
           </li>
