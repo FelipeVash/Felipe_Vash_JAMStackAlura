@@ -38,10 +38,10 @@ export default function ProjetoCard() {
     <CardWrapper>
       {[
         {
-          url: 'https://instalura-base-mixqs2ce1.vercel.app', name: 'Instalura', src: imgUrl1, alt: 'Foto do projeto Instalura',
+          url: 'https://instafolio.vercel.app/', name: 'Instalura', src: imgUrl1, alt: 'Foto do projeto Instalura',
         },
         {
-          url: 'https://dbzquiz.felipevash.vercel.app/', name: 'DBZQuiz', src: imgUrl2, alt: 'Foto do projeto DBZ-Quiz',
+          url: 'https://dbzquiz.vercel.app/', name: 'DBZQuiz', src: imgUrl2, alt: 'Foto do projeto DBZ-Quiz',
         },
         {
           url: 'https://github.com/FelipeVash', name: 'Perfil GitHub', src: imgUrl3, alt: 'Foto do projeto do Perfil GitHub',
