@@ -1,7 +1,8 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
-
 
 export const SobreWrapper = styled.main`
     display:flex;
@@ -13,25 +14,25 @@ export const SobreWrapper = styled.main`
     padding:20px;
     margin:0;
     ${breakpointsMedia({
-            sm: css`
+    sm: css`
                 max-width:none;
             `,
-            md: css`
+    md: css`
                 max-width:none;
             `,
-            lg: css`
+    lg: css`
                 max-width:none;
             `,
-            xl: css`
+    xl: css`
                 max-width:none;
             `,
-            xxl: css`
+    xxl: css`
                 max-width:none;
             `,
-            uhd: css`
+    uhd: css`
                 max-width:none;
             `,
-            })}
+  })}
     article{
         align-items: center;
         border-radius: 15px;
@@ -39,28 +40,28 @@ export const SobreWrapper = styled.main`
         padding: 15px;
         width: 100%;
         ${breakpointsMedia({
-            sm: css`
+    sm: css`
                 max-width:none;
             `,
-            md: css`
+    md: css`
                 max-width:none;
             `,
-            lg: css`
+    lg: css`
                 max-width:none;
             `,
-            xl: css`
+    xl: css`
                 flex-direction:row;
                 max-width:950px;
                 min-height:250px;
             `,
-            xxl: css`
+    xxl: css`
                 max-width:950px;
                 min-height:333.88px;
             `,
-            uhd: css`
+    uhd: css`
                 max-width:950px;
             `,
-            })}
+  })}
     &:hover,
     &:focus {
         box-shadow: 1px 1px 10px 5px black;
@@ -83,5 +84,3 @@ export const SobreWrapper = styled.main`
         }
     }
 `;
-
-

@@ -1,5 +1,7 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable no-unused-vars */
 import React from 'react';
-import styled, { css }from 'styled-components';
+import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 import { TextStyleVariants } from '../../foundation/Text';
 
@@ -16,27 +18,27 @@ export const Card = styled.article`
     transition: .3s;
     width: 100%;
     ${breakpointsMedia({
-        sm: css`
+    sm: css`
             max-width:450px;
         `,
-        md: css`
+    md: css`
             max-width:600px;
         `,
-        lg: css`
+    lg: css`
             max-width:600px;
             min-height:200px;
         `,
-        xl: css`
+    xl: css`
             max-width:350px;
             min-height:200px;
         `,
-        xxl: css`
+    xxl: css`
             max-width:500px;
         `,
-        uhd: css`
+    uhd: css`
             max-width:550px;
         `,
-        })}
+  })}
     &:hover,
     &:focus {
         box-shadow: 1px 1px 10px 10px black;
@@ -61,15 +63,15 @@ export const Card = styled.article`
         transition: .3s;
         width:100%;
         ${breakpointsMedia({
-        xs: css`
+    xs: css`
             ${TextStyleVariants.smallestException}
         `,
-        md: css`
+    md: css`
             ${TextStyleVariants.paragraph1}
         `,
-        xl: css`
+    xl: css`
             width:100%;
         `,
-        })}
+  })}
     }
 `;

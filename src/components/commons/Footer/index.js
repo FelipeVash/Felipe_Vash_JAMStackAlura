@@ -1,10 +1,12 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable no-undef */
 // eslint-disable-next-line react/jsx-props-no-spreading
 import React from 'react';
 import styled from 'styled-components';
 
-const TwitterIcon = require(`../../../../public/icons/Twitter.png`).default;
-const GitHubIcon = require(`../../../../public/icons/Github.png`).default;
+const TwitterIcon = require('../../../../public/icons/Twitter.png').default;
+const GitHubIcon = require('../../../../public/icons/Github.png').default;
+const LinkedinIcon = require('../../../../public/icons/Linkedin.png').default;
 
 const FooterWrapper = styled.footer`
   display: flex;
@@ -31,8 +33,9 @@ const Icons = styled.a`
     align-items: center;
     justify-content: center;
     padding: 10px 10px;
+    width:100%;
     img{
-      width: 100%;
+      width:40px;
       border: 2px groove #4dffff;
       border-radius: 50%;
       &:hover,
@@ -47,11 +50,14 @@ export default function Footer() {
   return (
     <FooterWrapper>
       <IconsWrapper>
-        <Icons href='http://twitter.com/felipevash'>
-          <img src={TwitterIcon} alt='Link para perfil do Twitter de Felipe Vash'/>
+        <Icons href="https://www.linkedin.com/in/felipevash/">
+          <img src={LinkedinIcon} alt="Link para perfil do LinkedIn de Felipe Vash" />
         </Icons>
-        <Icons href='http://github.com/felipevash'>
-          <img src={GitHubIcon} alt='Link para perfil do GitHub de Felipe Vash'/>
+        <Icons href="http://github.com/felipevash">
+          <img src={GitHubIcon} alt="Link para perfil do GitHub de Felipe Vash" />
+        </Icons>
+        <Icons href="http://twitter.com/felipevash">
+          <img src={TwitterIcon} alt="Link para perfil do Twitter de Felipe Vash" />
         </Icons>
       </IconsWrapper>
     </FooterWrapper>

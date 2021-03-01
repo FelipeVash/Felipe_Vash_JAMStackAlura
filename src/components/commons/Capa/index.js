@@ -1,9 +1,10 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 import styled from 'styled-components';
 import CapaWrapper from './styles/CapaWrapper';
 import Logo from '../Logo';
 
-const capaUrl = require(`../../../../public/images/capa.jpg`).default;
+const capaUrl = require('../../../../public/images/capa.jpg').default;
 
 const LogoWrapper = styled.figure`
   display: flex;
@@ -21,5 +22,5 @@ export default function Capa() {
         <Logo />
       </LogoWrapper>
     </CapaWrapper>
-  )
+  );
 }

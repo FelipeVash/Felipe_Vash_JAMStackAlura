@@ -1,10 +1,11 @@
+/* eslint-disable linebreak-style */
 import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
 
 const CapaWrapper = styled.header`
   display:flex;
   align-items: center;
-  background-image: url(${(props)=>props.imgUrl});
+  background-image: url(${(props) => props.imgUrl});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
 import { TextStyleVariants } from '../../../foundation/Text';
@@ -8,7 +9,6 @@ export const MenuWrapper = styled.nav`
   justify-content: center;
   width: 100%;
 `;
-
 
 export const MenuList = styled.ul`
   font-family: 'Rubik', sans-serif;
@@ -23,13 +23,15 @@ export const MenuList = styled.ul`
   width:100%;
   border-bottom: 5px groove #4dffff;
   border-top: 5px groove #4dffff;
-  li a {
+  li button {
     text-align: center;
     display: flex;
     align-items:center;
     text-decoration: none;
     color: #FFFFFF;
     transition: 200ms ease-in-out;
+    background-color: transparent;
+    border: none;
     ${breakpointsMedia({
     xs: css`
       ${TextStyleVariants.smallestException}
@@ -46,11 +48,17 @@ export const MenuList = styled.ul`
     uhd: css`
       font-size:20px;
     `,
-    })}
+  })}
     cursor: pointer;
     &:hover,
     &:focus {
       color: #ff0066;
+    }
+    &:active,
+    &:target,
+    &::selection {
+      border: none;
+      background: none;
     }
   }
 `;

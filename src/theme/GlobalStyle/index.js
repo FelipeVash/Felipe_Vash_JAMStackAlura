@@ -1,7 +1,8 @@
+/* eslint-disable linebreak-style */
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
 
-const imgUrl = require("../../../public/images/fundo.jpg").default;
+const imgUrl = require('../../../public/images/fundo.jpg').default;
 
 const GlobalStyle = createGlobalStyle`
   * {

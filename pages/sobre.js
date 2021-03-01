@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 import { Site } from '../src/components/commons/Site';
 import Capa from '../src/components/commons/Capa';
@@ -6,20 +7,40 @@ import { Text } from '../src/components/foundation/Text';
 import Conteudo from '../src/components/commons/Projetos';
 import Sobre from '../src/components/commons/Sobre';
 import Footer from '../src/components/commons/Footer';
+import FormCadastro from '../src/components/patterns/FormCadastro';
+import Modal from '../src/components/commons/Modal';
 
 export default function SobreSite() {
   const [conteudo, setConteudo] = React.useState('sobre');
+  const [isModalOpen, setModalState] = React.useState(false);
+
   return (
     <Site>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => {
+          setModalState(false);
+        }}
+      >
+        {(propsDoModal) => (
+          <FormCadastro propsDoModal={propsDoModal} />
+        )}
+      </Modal>
       <Capa />
       <Menu>
         {[
-          { name: 'Home', modo: 'home'},
-          { name: 'Sobre Mim', modo: 'sobre' },
-          { url: 'https://www.linkedin.com/in/felipevash/', name: 'Linkedin', modo: 'link' },
+          {
+            name: 'Home', function: setConteudo, modo: 'home',
+          },
+          {
+            name: 'Sobre Mim', function: setConteudo, modo: 'sobre',
+          },
+          {
+            name: 'Contato', function: setModalState, modo: 'true',
+          },
         ].map((link) => (
           <li key={link.name}>
-            <Text variant="smallestException" tag="a" href={link.url} onClick={() => {setConteudo(link.modo)}}>
+            <Text variant="smallestException" tag="button" onClick={() => { link.function(link.modo); }}>
               {link.name}
             </Text>
           </li>
@@ -27,8 +48,7 @@ export default function SobreSite() {
       </Menu>
       {conteudo === 'home' && <Conteudo />}
       {conteudo === 'sobre' && <Sobre />}
-      {conteudo === 'link' && <Sobre />}
       <Footer />
     </Site>
-  )
+  );
 }

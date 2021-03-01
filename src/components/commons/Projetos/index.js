@@ -1,6 +1,10 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable import/no-named-as-default */
+/* eslint-disable import/extensions */
+/* eslint-disable linebreak-style */
 import React from 'react';
 import styled from 'styled-components';
-import ProjetoCard from '../ProjetoCard/index.js';
+import ProjetoCard from '../ProjetoCard';
 import ProjetosWrapper from './styles/ProjetosWrapper.js';
 
 const Title = styled.h2`
@@ -17,10 +21,10 @@ const Title = styled.h2`
 `;
 
 export default function Conteudo() {
-    return (
-        <ProjetosWrapper>
-          <Title>MEUS PROJETOS</Title>
-          <ProjetoCard/>
-        </ProjetosWrapper>
-    )
+  return (
+    <ProjetosWrapper>
+      <Title>MEUS PROJETOS</Title>
+      <ProjetoCard />
+    </ProjetosWrapper>
+  );
 }
