@@ -45,7 +45,14 @@ function FormContent() {
     <form onSubmit={(event) => {
       event.preventDefault();
       setIsFormSubmited(true);
-
+      setTimeout(() => {
+        setUserInfo({
+          nome: '',
+          email: '',
+          menssage: '',
+        });
+        setIsFormSubmited(false);
+      }, 5000);
       // Data Transfer Object - DTO
       const userDTO = {
         email: userInfo.email,
@@ -139,7 +146,7 @@ function FormContent() {
           flexDirection="column"
           marginTop="20px"
           alignItems="center"
-          justifyContent="center"
+          justifyContent="space-evenly"
         >
           <Lottie
             width="50px"
@@ -152,35 +159,38 @@ function FormContent() {
             variant="smallestException"
             color="primary.main"
             textAlign="center"
+            marginTop="10px"
           >
             Deu tudo certo! =)
           </Text>
         </Box>
       )}
+      ;
 
       {isFormSubmited && submissionStatus === formStates.ERROR && (
-        <Box
-          display="flex"
-          flexDirection="column"
-          marginTop="20px"
-          alignItems="center"
-          justifyContent="center"
+      <Box
+        display="flex"
+        flexDirection="column"
+        marginTop="20px"
+        alignItems="center"
+        justifyContent="space-evenly"
+      >
+        <Lottie
+          width="50px"
+          height="50px"
+          className="lottie-container basic"
+          config={{ animationData: errorAnimation, loop: false, autoplay: true }}
+        />
+        <Text
+          tag="span"
+          variant="smallestException"
+          color="primary.main"
+          textAlign="center"
+          marginTop="10px"
         >
-          <Lottie
-            width="50px"
-            height="50px"
-            className="lottie-container basic"
-            config={{ animationData: errorAnimation, loop: false, autoplay: true }}
-          />
-          <Text
-            tag="span"
-            variant="smallestException"
-            color="primary.main"
-            textAlign="center"
-          >
-            Não foi possível enviar a mensagem, por gentileza, tente novamente.
-          </Text>
-        </Box>
+          Não foi possível enviar a mensagem, por gentileza, tente novamente.
+        </Text>
+      </Box>
       )}
     </form>
   );

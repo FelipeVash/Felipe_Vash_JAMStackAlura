@@ -90,6 +90,14 @@ const LogosContainer = styled.div`
     width:100%;
     max-width: 100px;
   }
+  .bootcamp {
+    filter: invert(1);
+    max-width: 80px;
+  }
+  .alura {
+    filter: invert(1);
+    max-width: 80px;
+  }
   ${breakpointsMedia({
     md: css`
       flex-direction:row;
@@ -116,6 +124,8 @@ export default function Sobre() {
           <img src={jamstackLogo} alt="Logo JamStack." />
           <img src={fccLogo} alt="Logo FreeCodeCamp" />
           <img className="next" src={nextjsLogo} alt="Logo NextJS" />
+          <img className="alura" src="https://www.alura.com.br/assets/img/home/alura-logo.1570550707.svg" alt="Logo Alura Cursos de Tecnologia" />
+          <img className="bootcamp" src="https://bootcamps.alura.com.br/assets/images/logos/logo-alurabootcamp.svg" alt="Logo BootCamp Alura" />
         </LogosContainer>
       </CardSobre>
     </SobreWrapper>
