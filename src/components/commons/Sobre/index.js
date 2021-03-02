@@ -3,13 +3,16 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable no-undef */
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Text } from '../../foundation/Text';
 import { SobreWrapper } from './styles/SobreWrapper';
 import { Card } from '../Card';
+import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 
 const fotoUrl = require('../../../../public/images/foto.jpg').default;
-const jamstackLogo = require('../../../../public/icons/jamstackLogo.png').default;
+const jamstackLogo = require('../../../../public/images/jamstackLogo.png').default;
+const fccLogo = require('../../../../public/images/fccLogo.png').default;
+const nextjsLogo = require('../../../../public/images/nextjsLogo.png').default;
 
 const SobreTexto = styled.h2`
   color: ${({ theme }) => theme.colors.primary.main.color};
@@ -24,12 +27,83 @@ const SobreTexto = styled.h2`
   width:100%;
 `;
 
+const CardSobre = styled(Card)`
+  align-items: center;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 15px;
+  width: 100%;
+  .avatar{
+    width:10%;
+    min-width:150px;
+    min-height:150px;
+    border-radius: 50%;
+    border: 8px groove #4dffff;
+  }
+  img{
+    all:initial;
+    width:100%;
+    max-width:150px;
+  }
+  ${breakpointsMedia({
+    sm: css`
+      max-width:none;
+    `,
+    md: css`
+      max-width:none;
+    `,
+    lg: css`
+      max-width:none;
+    `,
+    xl: css`
+      flex-direction:row;
+      flex-wrap: wrap;
+      max-width:950px;
+      min-height:250px;
+    `,
+    xxl: css`
+      max-width:950px;
+      min-height:333.88px;
+    `,
+    uhd: css`
+      max-width:950px;
+    `,
+  })}
+  &:hover,
+  &:focus {
+      box-shadow: 1px 1px 10px 5px black;
+      cursor: default;
+      transform: none;
+  }
+`;
+
+const LogosContainer = styled.div`
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  img {
+    margin-top: 10px;
+  }
+  .next {
+    width:100%;
+    max-width: 100px;
+  }
+  ${breakpointsMedia({
+    md: css`
+      flex-direction:row;
+      flex-wrap: wrap;
+    `,
+  })}
+`;
+
 export default function Sobre() {
   return (
     <SobreWrapper>
       <SobreTexto>SOBRE MIM</SobreTexto>
-      <Card>
-        <img src={fotoUrl} alt="Foto do Felipe Vash" />
+      <CardSobre>
+        <img className="avatar" src={fotoUrl} alt="Foto do Felipe Vash" />
         <Text as="p" variant="paragraph1" margin="20px">
           Com experiência em TI desde muito jovem, ganhador de bolsa de estudos integral, estudei WebDevelopment, Design Gráfico e Arquitetura de Rede ao longo dos anos e cresci em ambiente full tech, sempre pesquisando em todas as mídias.
           Nasci na época do crescimento da internet e cresci na época da grande transição.
@@ -38,8 +112,12 @@ export default function Sobre() {
           Movido pelo objetivo de acesso pleno e democrático a tecnologia, foco meus projetos tanto em desempenho, estética, responsividade quanto em acessibilidade para todas as pessoas.
           Estudante ávido em busca constante de aperfeiçoamento e de novos conhecimentos e habilidades.
         </Text>
-        <img src={jamstackLogo} alt="Logo JamStack." />
-      </Card>
+        <LogosContainer>
+          <img src={jamstackLogo} alt="Logo JamStack." />
+          <img src={fccLogo} alt="Logo FreeCodeCamp" />
+          <img className="next" src={nextjsLogo} alt="Logo NextJS" />
+        </LogosContainer>
+      </CardSobre>
     </SobreWrapper>
   );
 }

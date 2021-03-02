@@ -1,7 +1,9 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Card } from '../Card';
+import { TextStyleVariants } from '../../foundation/Text';
+import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 
 const imgUrl1 = require('../../../../public/images/projetoteste.jpg').default;
 const imgUrl2 = require('../../../../public/images/projetoteste2.jpg').default;
@@ -33,7 +35,68 @@ const CardWrapper = styled.section`
     width: 100%;
 `;
 
-export default function ProjetoCard() {
+const CardProjeto = styled(Card)`
+   ${breakpointsMedia({
+    sm: css`
+            max-width:450px;
+        `,
+    md: css`
+            max-width:600px;
+        `,
+    lg: css`
+            max-width:600px;
+            min-height:200px;
+        `,
+    xl: css`
+            max-width:350px;
+            min-height:200px;
+        `,
+    xxl: css`
+            max-width:500px;
+        `,
+    uhd: css`
+            max-width:550px;
+        `,
+  })}
+  &:hover,
+  &:focus {
+    box-shadow: 1px 1px 10px 10px black;
+    cursor:pointer;
+    transform: scale(1.05);
+    a{
+        cursor:pointer;
+        border: 3px groove #ff0066;
+    }
+  }
+  a{
+    align-items: center;
+    display: flex;
+    background-color:#000000CC;
+    border: 3px groove;
+    border-color: ${({ theme }) => theme.colors.borders.primary.color};
+    border-radius:15px;
+    box-shadow: 1px 1px 10px 2px black;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding:5px;
+    text-decoration: none;
+    transition: .3s;
+    width:100%;
+    ${breakpointsMedia({
+    xs: css`
+        ${TextStyleVariants.smallestException}
+      `,
+    md: css`
+        ${TextStyleVariants.paragraph1}
+      `,
+    xl: css`
+        width:100%;
+      `,
+  })}
+  }
+`;
+
+export default function Projeto() {
   return (
     <CardWrapper>
       {[
@@ -47,14 +110,14 @@ export default function ProjetoCard() {
           url: 'https://github.com/FelipeVash', name: 'PERFIL GITHUB', src: imgUrl3, alt: 'Foto do projeto do Perfil GitHub',
         },
       ].map((link) => (
-        <Card key={link.url}>
+        <CardProjeto key={link.url}>
           <a href={link.url}>
             <ProjetoImage src={link.src} alt={link.alt} />
             <ProjetoNome>
               {link.name}
             </ProjetoNome>
           </a>
-        </Card>
+        </CardProjeto>
       ))}
     </CardWrapper>
   );

@@ -4,7 +4,7 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
 import styled from 'styled-components';
-import ProjetoCard from '../ProjetoCard';
+import Projeto from '../ProjetoCard';
 import ProjetosWrapper from './styles/ProjetosWrapper.js';
 
 const Title = styled.h2`
@@ -24,7 +24,7 @@ export default function Conteudo() {
   return (
     <ProjetosWrapper>
       <Title>MEUS PROJETOS</Title>
-      <ProjetoCard />
+      <Projeto />
     </ProjetosWrapper>
   );
 }
