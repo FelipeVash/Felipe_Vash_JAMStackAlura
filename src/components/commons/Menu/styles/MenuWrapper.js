@@ -11,24 +11,25 @@ export const MenuWrapper = styled.nav`
 `;
 
 export const MenuList = styled.ul`
-  font-family: 'Rubik', sans-serif;
-  display: flex;
   align-items: center;
+  background-color: ${({ theme }) => theme.colors.background.tertiary.color};
+  border-bottom: 5px groove;
+  border-top: 5px groove;
+  border-color: ${({ theme }) => theme.colors.borders.primary.color};
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Rubik', sans-serif;
   justify-content: space-evenly;
   list-style-type: none;
-  flex-wrap: wrap;
   padding:10px 28px 10px 28px;
-  background-color: #000000;
   margin:0;
   width:100%;
-  border-bottom: 5px groove #4dffff;
-  border-top: 5px groove #4dffff;
   li button {
     text-align: center;
     display: flex;
     align-items:center;
     text-decoration: none;
-    color: #FFFFFF;
+    color: ${({ theme }) => theme.colors.primary.main.color};
     transition: 200ms ease-in-out;
     background-color: transparent;
     border: none;
@@ -39,12 +40,6 @@ export const MenuList = styled.ul`
     md: css`
       ${TextStyleVariants.paragraph1}
     `,
-    lg: css`
-    `,
-    xl: css`
-    `,
-    xxl: css`
-    `,
     uhd: css`
       font-size:20px;
     `,
@@ -52,7 +47,7 @@ export const MenuList = styled.ul`
     cursor: pointer;
     &:hover,
     &:focus {
-      color: #ff0066;
+      color: ${({ theme }) => theme.colors.tertiary.main.color};
     }
     &:active,
     &:target,

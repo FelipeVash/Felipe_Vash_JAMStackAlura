@@ -30,13 +30,13 @@ export default function Home() {
       <Menu>
         {[
           {
-            name: 'Home', function: setConteudo, modo: 'home',
+            name: 'HOME', function: setConteudo, modo: 'home',
           },
           {
-            name: 'Sobre Mim', function: setConteudo, modo: 'sobre',
+            name: 'SOBRE MIM', function: setConteudo, modo: 'sobre',
           },
           {
-            name: 'Contato', function: setModalState, modo: 'true',
+            name: 'CONTATO', function: setModalState, modo: 'true',
           },
         ].map((link) => (
           <li key={link.name}>

@@ -3,42 +3,62 @@ import { typographyVariants } from './typographyVariants';
 
 export const colors = {
   background: {
-    light: {
-      color: '#FFFFFF',
+    primary: {
+      color: '#090909',
+      contrastText: '#FFFFFF',
     },
-    main: {
-      color: '#FFFFFF',
+    secondary: {
+      color: '#191919',
+      contrastText: '#FFFFFF',
+    },
+    tertiary: {
+      color: '#000000',
+      ontrastText: '#FFFFFF',
     },
   },
   borders: {
-    main: {
-      color: '#F1F1F1',
+    primary: {
+      color: '#4dffff',
+    },
+    secondary: {
+      color: '#ff0066',
+    },
+  },
+  button: {
+    primary: {
+      color: '#4DFFFF',
+      contrastText: '#000000',
+    },
+    secondary: {
+      color: '#FF0066',
+      contrastText: '#FFFFFF',
+    },
+    tertiary: {
+      color: '#FFFFFF',
+      contrastText: '#000000',
     },
   },
   primary: {
     main: {
       color: '#FFFFFF',
-      contrastText: 'black',
+      contrastText: '#000000',
     },
   },
   secondary: {
     main: {
       color: '#4dffff',
-      contrastText: '#fff',
+      contrastText: '#000000',
     },
   },
   tertiary: {
     main: {
-      color: '#000000CC',
-      contrastText: '#fff',
+      color: '#ff0066',
+      contrastText: '#FFFFFF',
     },
     light: {
       color: '#88989E',
       contrastText: '#fff',
     },
-  },
-  modes: {
-    dark: {},
   },
 };
 
@@ -54,7 +74,7 @@ export default {
     xxl: 1620,
     uhd: 2200, // 4k tv
   },
-  borderRadius: '8px',
+  borderRadius: '15px',
   transition: '200ms ease-in-out',
   fontFamily: '\'Rubik\', sans-serif',
 };

@@ -16,7 +16,8 @@ const FooterWrapper = styled.footer`
   width: 100%;
   min-height: 100px;
   border-radius: 0px 0px 15px 15px;
-  border-top: 5px groove #4dffff;
+  border-top: 5px groove;
+  border-color: ${({ theme }) => theme.colors.borders.primary.color};
 `;
 
 const IconsWrapper = styled.section`
@@ -25,7 +26,8 @@ const IconsWrapper = styled.section`
   justify-content: space-evenly;
   background-color:#FFFFFF1A;
   border-radius: 15px;
-  border: 2px groove #4dffff;
+  border: 2px groove;
+  border-color: ${({ theme }) => theme.colors.borders.primary.color};
 `;
 
 const Icons = styled.a`
@@ -36,11 +38,12 @@ const Icons = styled.a`
     width:100%;
     img{
       width:40px;
-      border: 2px groove #4dffff;
+      border: 2px groove;
+      border-color: ${({ theme }) => theme.colors.borders.primary.color};
       border-radius: 50%;
       &:hover,
       &:focus {
-        border: 2px groove #ff0066;
+        border-color: #ff0066;
         cursor: pointer;
       }
     }

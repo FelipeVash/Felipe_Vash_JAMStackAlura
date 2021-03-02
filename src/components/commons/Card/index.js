@@ -53,7 +53,8 @@ export const Card = styled.article`
         align-items: center;
         display: flex;
         background-color:#000000CC;
-        border: 3px groove #4dffff;
+        border: 3px groove;
+        border-color: ${({ theme }) => theme.colors.borders.primary.color};
         border-radius:15px;
         box-shadow: 1px 1px 10px 2px black;
         flex-direction: column;

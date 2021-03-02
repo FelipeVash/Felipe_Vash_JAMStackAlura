@@ -37,6 +37,7 @@ export default function Sobre() {
           Movido pelo objetivo de acesso pleno e democrático a tecnologia, foco meus projetos tanto em desempenho, estética, responsividade quanto em acessibilidade para todas as pessoas.
           Estudante ávido em busca constante de aperfeiçoamento e de novos conhecimentos e habilidades.
         </Text>
+        <img src="icons/jamstacklogo.png" alt="Logo JamStack." />
       </Card>
     </SobreWrapper>
   );

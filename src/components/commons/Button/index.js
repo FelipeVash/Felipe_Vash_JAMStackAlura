@@ -6,15 +6,23 @@ import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 import { propToStyle } from '../../../theme/utils/propToStyle';
 
 const ButtonGhost = css`
-  color: ${({ theme, variant }) => get(theme, `colors.${variant}.color`)};
   background-color: transparent;
-  border: 3px groove #4dffff;
+  border: 3px groove;
+  border-color: white;
+  color: white;
 `;
 
 const ButtonDefault = css`
+  background-color: ${({ theme, variant }) => get(theme, `colors.button.${variant}.color`)};
+  border: 3px groove;
+  border-color: ${({ theme, variant }) => get(theme, `colors.borders.${variant}.color`)};
   color: ${({ theme, variant }) => get(theme, `colors.${variant}.contrastText`)};
-  background-color: ${({ theme, variant }) => get(theme, `colors.${variant}.color`)};
-  border: 3px groove #4dffff;
+  &:hover,
+  &:focus {
+    border-color: #ff0066;
+    color: white;
+    background-color: #FF0066;
+  }
 `;
 
 // eslint-disable-next-line import/prefer-default-export
@@ -34,12 +42,13 @@ export const Button = styled.button`
     md: css`
       padding: 12px 43px;
       ${TextStyleVariants.paragraph1}
+      font-weight: 500;
     `,
   })}
 
   &:disabled {
     cursor: not-allowed;
-    opacity: .5;
+    opacity: .7;
   }
   
   ${({ fullWidth }) => fullWidth && css`
@@ -48,10 +57,5 @@ export const Button = styled.button`
 
   ${propToStyle('margin')}
   ${propToStyle('display')}
-  ${({ ghost }) => (ghost ? ButtonGhost : ButtonDefault)}
-  &:hover,
-  &:focus {
-    opacity: .7;
-    border-color: #ff0066;
-  }
+  ${({ disabled }) => (disabled ? ButtonGhost : ButtonDefault)}
 `;

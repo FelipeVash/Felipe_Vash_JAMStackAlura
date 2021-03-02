@@ -51,6 +51,7 @@ export const SobreWrapper = styled.main`
             `,
     xl: css`
                 flex-direction:row;
+                flex-wrap: wrap;
                 max-width:950px;
                 min-height:250px;
             `,
@@ -75,12 +76,17 @@ export const SobreWrapper = styled.main`
             margin-left:0;
             margin-right:0;
         }
-        img{
+        img:first-child{
             width:10%;
             min-width:150px;
             min-height:150px;
             border-radius: 50%;
             border: 8px groove #4dffff;
+        }
+        img{
+            all:initial;
+            width:100%;
+            max-width:150px;
         }
     }
 `;

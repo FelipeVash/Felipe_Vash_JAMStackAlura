@@ -2,8 +2,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
 
-const imgUrl = require('../../../public/images/fundo.jpg').default;
-
 const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
@@ -22,9 +20,7 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
   }
   html{
-    background-color: #090909;
-/*     background-image: url(${imgUrl});
-    background-repeat: no-repeat; */
+    background-color:  ${({ theme }) => theme.colors.background.primary.color};
   }
   #__next {
     flex: 1;

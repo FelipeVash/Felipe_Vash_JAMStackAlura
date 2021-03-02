@@ -1,20 +1,23 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable linebreak-style */
 import React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheet } from 'styled-components'
+import Document, {
+  Html, Head, Main, NextScript,
+} from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
-    const sheet = new ServerStyleSheet()
-    const originalRenderPage = ctx.renderPage
+    const sheet = new ServerStyleSheet();
+    const originalRenderPage = ctx.renderPage;
 
     try {
-      ctx.renderPage = () =>
-        originalRenderPage({
-          enhanceApp: (App) => (props) =>
-            sheet.collectStyles(<App {...props} />),
-        })
+      ctx.renderPage = () => originalRenderPage({
+        enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
+      });
 
-      const initialProps = await Document.getInitialProps(ctx)
+      const initialProps = await Document.getInitialProps(ctx);
       return {
         ...initialProps,
         styles: (
@@ -23,24 +26,25 @@ export default class MyDocument extends Document {
             {sheet.getStyleElement()}
           </>
         ),
-      }
+      };
     } finally {
-      sheet.seal()
+      sheet.seal();
     }
   }
+
   render() {
-    return(
-      <Html lang='pt-br'>
+    return (
+      <Html lang="pt-br">
         <Head>
           <meta name="robots" content="all" />
-          <meta name="Description" content="Portfolio do desenvolvedor FrontEnd Felipe Vash."></meta>
-          <meta name="theme-color" content="#317EFB"/>
+          <meta name="Description" content="Portfolio do desenvolvedor FrontEnd Felipe Vash." />
+          <meta name="theme-color" content="#317EFB" />
         </Head>
-          <body>
-            <Main />
-            <NextScript />
-          </body>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
       </Html>
-    )
+    );
   }
 }

@@ -99,6 +99,7 @@ function FormContent() {
           name="nome"
           value={userInfo.nome}
           onChange={handleChange} // capturadores de ação
+          tag="input"
         />
       </div>
 
@@ -108,6 +109,7 @@ function FormContent() {
           name="email"
           value={userInfo.email}
           onChange={handleChange} // capturadores de ação
+          tag="input"
         />
       </div>
 
@@ -117,16 +119,18 @@ function FormContent() {
           name="menssage"
           value={userInfo.menssage}
           onChange={handleChange} // capturadores de ação
+          tag="textarea"
+          height="200px"
         />
       </div>
 
       <Button
-        variant="tertiary.main"
+        variant="primary"
         type="submit"
         disabled={isFormInvalid}
         fullWidth
       >
-        Cadastrar
+        ENVIAR
       </Button>
 
       {isFormSubmited && submissionStatus === formStates.DONE && (

@@ -10,7 +10,7 @@ const LogoImagem = styled.img`
     width:100%;
     align-self:center;
     border-radius: 50%;
-    border: 8px groove #4dffff;
+    border: 8px groove ${({ theme }) => theme.colors.borders.primary.color};
 `;
 
 export default function Logo() {
