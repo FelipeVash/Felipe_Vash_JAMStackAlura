@@ -58,16 +58,6 @@ const CardProjeto = styled(Card)`
             max-width:550px;
         `,
   })}
-  &:hover,
-  &:focus {
-    box-shadow: 1px 1px 10px 10px black;
-    cursor:pointer;
-    transform: scale(1.05);
-    a{
-        cursor:pointer;
-        border: 3px groove #ff0066;
-    }
-  }
   a{
     align-items: center;
     display: flex;
@@ -93,6 +83,16 @@ const CardProjeto = styled(Card)`
         width:100%;
       `,
   })}
+  }
+  &:hover,
+  &:focus {
+    box-shadow: 1px 1px 10px 10px black;
+    cursor:pointer;
+    transform: scale(1.05);
+    a{
+        cursor:pointer;
+        border-color: #ff0066;
+    }
   }
 `;
 

@@ -4,6 +4,7 @@ import React from 'react';
 import { Lottie } from '@crello/react-lottie';
 import successAnimation from './animations/success.json';
 import errorAnimation from './animations/error.json';
+import menssageAnimation from './animations/menssage.json';
 import { Grid } from '../../layout/Grid';
 import { Box } from '../../layout/Box';
 import { Button } from '../../commons/Button';
@@ -84,6 +85,12 @@ function FormContent() {
         });
     }}
     >
+      <Lottie
+        width="100%"
+        height="250px"
+        className="lottie-container basic"
+        config={{ animationData: menssageAnimation, loop: true, autoplay: true }}
+      />
       <Text
         variant="title"
         tag="h1"
@@ -97,7 +104,7 @@ function FormContent() {
         color="primary.main"
         marginBottom="32px"
       >
-        Deixe seu e-mail e sua mensagem, por gentileza. =)
+        Deixe seu nome, e-mail e sua mensagem, por gentileza. =)
       </Text>
 
       <div>
