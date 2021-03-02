@@ -218,7 +218,7 @@ export default function FormCadastro({ propsDoModal }) {
         justifyContent="center"
         paddingRight={{ md: '0' }}
         flex={1}
-        value={{ xs: 11.5, md: 5, lg: 4 }}
+        value={{ xs: 11.5, md: 8, xl: 4 }}
       >
         <Box
           boxShadow="-10px 0px 24px rgba(7, 12, 14, 0.1)"
@@ -228,7 +228,7 @@ export default function FormCadastro({ propsDoModal }) {
           flex={1}
           padding={{
             xs: '16px',
-            md: '85px',
+            md: '40px',
           }}
           backgroundColor="#090909E6"
           // eslint-disable-next-line react/jsx-props-no-spreading

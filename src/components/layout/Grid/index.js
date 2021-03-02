@@ -29,7 +29,7 @@ export const Grid = {
     sm: css`
             justify-content: center;
         `,
-    lg: css`
+    xl: css`
             justify-content: flex-end;
         `,
   })}
