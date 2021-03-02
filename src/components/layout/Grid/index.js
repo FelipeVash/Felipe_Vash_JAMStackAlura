@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 import { propToStyle } from '../../../theme/utils/propToStyle';
@@ -9,22 +10,6 @@ const Container = styled.div`
     margin-right: auto;
     margin-left: auto;
     max-width: initial;
-    ${breakpointsMedia({
-    sm: css`
-      max-width: 576px; 
-    `,
-    md: css`
-      max-width: 768px;
-      padding-right: 16px;
-      padding-left: 16px; 
-    `,
-    lg: css`
-      max-width: 1160px; 
-    `,
-    xl: css`
-      max-width: 1222px;
-    `,
-  })}
   ${propToStyle('marginTop')}
 `;
 
@@ -40,6 +25,14 @@ export const Grid = {
     ${propToStyle('marginLeft')}
     ${propToStyle('marginRight')}
     ${propToStyle('justifyContent')}
+    ${breakpointsMedia({
+    sm: css`
+            justify-content: center;
+        `,
+    lg: css`
+            justify-content: flex-end;
+        `,
+  })}
   `,
   Col: styled.div`
     padding-right: 16px;
