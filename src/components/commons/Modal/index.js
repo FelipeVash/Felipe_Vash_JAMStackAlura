@@ -32,6 +32,7 @@ ${({ isOpen }) => {
   `;
   }}
 `;
+
 const LockScroll = createGlobalStyle`
   body {
     overflow: hidden;

@@ -1,14 +1,15 @@
+/* eslint-disable linebreak-style */
 import { css } from 'styled-components';
 import { breakpointsMedia } from './breakpointsMedia';
 
 export function propToStyle(propName) {
   return (props) => {
     const propValue = props[propName];
-    
-    if(typeof propValue === 'string' || typeof propValue === 'number') {
+
+    if (typeof propValue === 'string' || typeof propValue === 'number') {
       return {
-        [propName]: propValue
-      }
+        [propName]: propValue,
+      };
     }
 
     if (typeof propValue === 'object') {

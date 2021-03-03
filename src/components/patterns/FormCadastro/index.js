@@ -1,6 +1,8 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable no-console */
 import React from 'react';
+import styled from 'styled-components';
+import { CloseO } from '@styled-icons/evil/CloseO';
 import { Lottie } from '@crello/react-lottie';
 import successAnimation from './animations/success.json';
 import errorAnimation from './animations/error.json';
@@ -17,6 +19,14 @@ const formStates = {
   DONE: 'DONE',
   ERROR: 'ERROR',
 };
+
+const CloseButton = styled(CloseO)`
+  display: flex;
+  filter: invert(1);
+  width:50px;
+  height:50px;
+  cursor: pointer;
+`;
 
 function FormContent() {
   const [isFormSubmited, setIsFormSubmited] = React.useState(false);
@@ -175,36 +185,36 @@ function FormContent() {
       ;
 
       {isFormSubmited && submissionStatus === formStates.ERROR && (
-      <Box
-        display="flex"
-        flexDirection="column"
-        marginTop="20px"
-        alignItems="center"
-        justifyContent="space-evenly"
-      >
-        <Lottie
-          width="50px"
-          height="50px"
-          className="lottie-container basic"
-          config={{ animationData: errorAnimation, loop: false, autoplay: true }}
-        />
-        <Text
-          tag="span"
-          variant="smallestException"
-          color="primary.main"
-          textAlign="center"
-          marginTop="10px"
+        <Box
+          display="flex"
+          flexDirection="column"
+          marginTop="20px"
+          alignItems="center"
+          justifyContent="space-evenly"
         >
-          Não foi possível enviar a mensagem, por gentileza, tente novamente.
-        </Text>
-      </Box>
+          <Lottie
+            width="50px"
+            height="50px"
+            className="lottie-container basic"
+            config={{ animationData: errorAnimation, loop: false, autoplay: true }}
+          />
+          <Text
+            tag="span"
+            variant="smallestException"
+            color="primary.main"
+            textAlign="center"
+            marginTop="10px"
+          >
+            Não foi possível enviar a mensagem, por gentileza, tente novamente.
+          </Text>
+        </Box>
       )}
     </form>
   );
 }
 
 // eslint-disable-next-line react/prop-types
-export default function FormCadastro({ propsDoModal }) {
+export default function FormCadastro({ onClose, propsDoModal }) {
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
     <Grid.Row
@@ -234,7 +244,12 @@ export default function FormCadastro({ propsDoModal }) {
           // eslint-disable-next-line react/jsx-props-no-spreading
           {...propsDoModal}
         >
-          <FormContent />
+          <CloseButton
+            onClick={() => {
+              onClose();
+            }}
+          />
+          <FormContent propsDoModal={propsDoModal} />
         </Box>
 
       </Grid.Col>

@@ -53,7 +53,7 @@ const TextBase = styled.span`
 
 export function Text({
   variant,
-  children,
+  /*   children, */
   tag,
   ...props
 }) {
@@ -64,7 +64,7 @@ export function Text({
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
     >
-      {children}
+      {/*    {children} */}
     </TextBase>
   );
 }
@@ -75,7 +75,7 @@ Text.defaultProps = {
 };
 
 Text.propTypes = {
-  children: PropTypes.node.isRequired,
-  tag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'li', 'a', 'span', 'input', 'textarea']),
+/*   children: PropTypes.node.isRequired, */
+  tag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'li', 'a', 'span', 'input', 'textarea', 'button']),
   variant: PropTypes.oneOf(['title', 'paragraph1', 'smallestException']),
 };

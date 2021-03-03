@@ -18,12 +18,13 @@ export default function Home() {
     <Site>
       <Modal
         isOpen={isModalOpen}
-        onClose={() => {
-          setModalState(false);
-        }}
+        onClose={() => setModalState(false)}
       >
         {(propsDoModal) => (
-          <FormCadastro propsDoModal={propsDoModal} />
+          <FormCadastro
+            propsDoModal={propsDoModal}
+            onClose={() => setModalState(false)}
+          />
         )}
       </Modal>
       <Capa />

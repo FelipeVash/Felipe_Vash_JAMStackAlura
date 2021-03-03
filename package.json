@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@crello/react-lottie": "0.0.11",
+    "@styled-icons/evil": "^10.18.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.22.1",
     "framer-motion": "^3.8.1",
@@ -24,6 +25,7 @@
     "react-lottie": "^1.2.3",
     "shelljs": "^0.8.4",
     "styled-components": "^5.0.0",
+    "styled-icons": "^10.29.0",
     "styled-normalize": "^8.0.7"
   },
   "devDependencies": {
