@@ -61,7 +61,7 @@ const CardProjeto = styled(Card)`
   a{
     align-items: center;
     display: flex;
-    background-color:#000000CC;
+    background-color: ${({ theme }) => theme.colors.card.secondary.color};
     border: 3px groove;
     border-color: ${({ theme }) => theme.colors.borders.primary.color};
     border-radius:15px;
@@ -72,6 +72,7 @@ const CardProjeto = styled(Card)`
     text-decoration: none;
     transition: .3s;
     width:100%;
+    backdrop-filter: blur(50px);
     ${breakpointsMedia({
     xs: css`
         ${TextStyleVariants.smallestException}
@@ -86,12 +87,12 @@ const CardProjeto = styled(Card)`
   }
   &:hover,
   &:focus {
-    box-shadow: 1px 1px 10px 10px black;
+    box-shadow: 1.05px 1.05px 10px 5px #000002;
     cursor:pointer;
     transform: scale(1.05);
     a{
         cursor:pointer;
-        border-color: #ff0066;
+        border-color: ${({ theme }) => theme.colors.borders.secondary.color};
     }
   }
 `;

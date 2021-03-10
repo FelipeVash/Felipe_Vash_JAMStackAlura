@@ -4,60 +4,75 @@ import { typographyVariants } from './typographyVariants';
 export const colors = {
   background: {
     primary: {
-      color: '#090909',
-      contrastText: '#FFFFFF',
+      color: '#09090B',
+      contrastText: '#ffffff',
     },
     secondary: {
-      color: '#191919',
-      contrastText: '#FFFFFF',
+      color: '#000002',
+      contrastText: '#ffffff',
     },
     tertiary: {
-      color: '#000000',
-      ontrastText: '#FFFFFF',
+      color: '#272730',
+      contrastText: '#ffffff',
     },
   },
   borders: {
     primary: {
-      color: '#4dffff',
+      color: '#00cbcc',
     },
     secondary: {
-      color: '#ff0066',
+      color: '#ff006e',
+    },
+    tertiary: {
+      color: '#FFFFFF',
     },
   },
   button: {
     primary: {
-      color: '#4DFFFF',
-      contrastText: '#000000',
+      color: '#00cbcc',
+      contrastText: '#000002',
     },
     secondary: {
-      color: '#FF0066',
-      contrastText: '#FFFFFF',
+      color: '#ff006e',
+      contrastText: '#ffffff',
     },
     tertiary: {
-      color: '#FFFFFF',
-      contrastText: '#000000',
+      color: 'transparent',
+      contrastText: '#FFFFFF',
+      borderColor: '#FFFFFF',
+    },
+  },
+  card: {
+    primary: {
+      color: '#FFFFFFE6',
+      contrastText: '#000002',
+      boxShadow: '#000002',
+    },
+    secondary: {
+      color: '#272730E6',
+      contrastText: '#FFFFFF',
     },
   },
   primary: {
     main: {
-      color: '#FFFFFF',
-      contrastText: '#000000',
+      color: '#ffffff',
+      contrastText: '#000002',
     },
   },
   secondary: {
     main: {
-      color: '#4dffff',
-      contrastText: '#000000',
+      color: '#00cbcc',
+      contrastText: '#000002',
     },
   },
   tertiary: {
     main: {
-      color: '#ff0066',
-      contrastText: '#FFFFFF',
+      color: '#ff006e',
+      contrastText: '#ffffff',
     },
     light: {
       color: '#88989E',
-      contrastText: '#fff',
+      contrastText: '#ffffff',
     },
   },
 };

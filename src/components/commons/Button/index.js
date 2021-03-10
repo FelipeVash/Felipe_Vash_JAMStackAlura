@@ -6,22 +6,22 @@ import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 import { propToStyle } from '../../../theme/utils/propToStyle';
 
 const ButtonGhost = css`
-  background-color: transparent;
+  background-color: ${({ theme }) => theme.colors.button.tertiary.color};
   border: 3px groove;
-  border-color: white;
-  color: white;
+  border-color: ${({ theme }) => theme.colors.button.tertiary.borderColor};
+  color: ${({ theme }) => theme.colors.button.tertiary.contrastText};
 `;
 
 const ButtonDefault = css`
   background-color: ${({ theme, variant }) => get(theme, `colors.button.${variant}.color`)};
   border: 3px groove;
   border-color: ${({ theme, variant }) => get(theme, `colors.borders.${variant}.color`)};
-  color: ${({ theme, variant }) => get(theme, `colors.${variant}.contrastText`)};
+  color: ${({ theme, variant }) => get(theme, `colors.button.${variant}.contrastText`)};
   &:hover,
   &:focus {
-    border-color: #ff0066;
-    color: white;
-    background-color: #FF0066;
+    background-color: ${({ theme }) => theme.colors.button.secondary.color};
+    border-color: ${({ theme }) => theme.colors.button.secondary.color};
+    color: ${({ theme }) => theme.colors.button.secondary.contrastText};
   }
 `;
 

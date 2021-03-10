@@ -22,10 +22,14 @@ const formStates = {
 
 const CloseButton = styled(CloseO)`
   display: flex;
-  filter: invert(1);
+  color: #FFFFFF;
   width:50px;
   height:50px;
   cursor: pointer;
+  &:hover,
+  &:focus {
+    color: ${({ theme }) => theme.colors.tertiary.main.color};
+  }
 `;
 
 function FormContent() {
@@ -240,7 +244,7 @@ export default function FormCadastro({ onClose, propsDoModal }) {
             xs: '16px',
             md: '40px',
           }}
-          backgroundColor="#090909E6"
+          backgroundColor="#09090BE6"
           // eslint-disable-next-line react/jsx-props-no-spreading
           {...propsDoModal}
         >

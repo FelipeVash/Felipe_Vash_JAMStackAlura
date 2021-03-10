@@ -10,6 +10,9 @@ export const ProjetosWrapper = styled.main`
     height: 100%;
     padding:20px;
     margin:0;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 2, .15);
+    backdrop-filter: blur(5px);
 `;
 
 export default ProjetosWrapper;

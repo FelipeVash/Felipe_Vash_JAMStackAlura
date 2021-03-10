@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 export const Site = styled.section`
   align-items: center;
-  background-color: #FFFFFF1A;
+  background-color: ${({ theme }) => theme.colors.background.tertiary.color};
   border-radius: 15px;
   display: flex;
   flex-direction: column;

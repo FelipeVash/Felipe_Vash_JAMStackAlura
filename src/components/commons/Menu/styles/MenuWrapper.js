@@ -12,7 +12,7 @@ export const MenuWrapper = styled.nav`
 
 export const MenuList = styled.ul`
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.background.tertiary.color};
+  background-color: ${({ theme }) => theme.colors.background.secondary.color};
   border-bottom: 5px groove;
   border-top: 5px groove;
   border-color: ${({ theme }) => theme.colors.borders.primary.color};
@@ -48,6 +48,7 @@ export const MenuList = styled.ul`
     &:hover,
     &:focus {
       color: ${({ theme }) => theme.colors.tertiary.main.color};
+      transform: scale(1.05);
     }
     &:active,
     &:target,

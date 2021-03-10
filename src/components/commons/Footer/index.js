@@ -12,7 +12,7 @@ const FooterWrapper = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color:#000000;
+  background-color: ${({ theme }) => theme.colors.background.secondary.color};
   width: 100%;
   min-height: 100px;
   border-radius: 0px 0px 15px 15px;
@@ -24,7 +24,7 @@ const IconsWrapper = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color:#FFFFFF1A;
+  background-color: ${({ theme }) => theme.colors.background.tertiary.color};
   border-radius: 15px;
   border: 2px groove;
   border-color: ${({ theme }) => theme.colors.borders.primary.color};
@@ -45,6 +45,7 @@ const Icons = styled.a`
       &:focus {
         border-color: #ff0066;
         cursor: pointer;
+        transform: scale(1.05);
       }
     }
 `;

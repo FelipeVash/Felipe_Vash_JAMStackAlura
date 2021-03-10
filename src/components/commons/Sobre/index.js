@@ -38,7 +38,7 @@ const CardSobre = styled(Card)`
     min-width:150px;
     min-height:150px;
     border-radius: 50%;
-    border: 8px groove #4dffff;
+    border: 8px groove ${({ theme }) => theme.colors.borders.primary.color};
   }
   img{
     all:initial;
@@ -112,7 +112,7 @@ export default function Sobre() {
       <SobreTexto>SOBRE MIM</SobreTexto>
       <CardSobre>
         <img className="avatar" src={fotoUrl} alt="Foto do Felipe Vash" />
-        <Text as="p" variant="paragraph1" margin="20px">
+        <Text as="p" variant="paragraph1" margin="20px" color="#000002">
           Com experiência em TI desde muito jovem, ganhador de bolsa de estudos integral, estudei WebDevelopment, Design Gráfico e Arquitetura de Rede ao longo dos anos e cresci em ambiente full tech, sempre pesquisando em todas as mídias.
           Nasci na época do crescimento da internet e cresci na época da grande transição.
           Tenho total experiência em todas as plataformas Windows, MacOS e Linux Ubuntu.
