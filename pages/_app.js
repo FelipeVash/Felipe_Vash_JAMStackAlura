@@ -18,6 +18,23 @@ export default function App({ Component, pageProps }) {
           rel="stylesheet"
           defer
         />
+        {/* <!-- Primary Meta Tags --> */}
+        <title>Felipe Vash || Dev</title>
+        <meta name="title" content="Felipe Vash || Dev" />
+        <meta name="description" content="Portfolio do desenvolvedor FrontEnd Felipe Vash." />
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://felipevash.vercel.app/" />
+        <meta property="og:title" content="Felipe Vash || Dev" />
+        <meta property="og:description" content="Portfolio do desenvolvedor FrontEnd Felipe Vash." />
+        <meta property="og:image" content="public/images/sitepreview.jpg" />
+        {/* <!-- Twitter --> */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://felipevash.vercel.app/" />
+        <meta property="twitter:title" content="Felipe Vash || Dev" />
+        <meta property="twitter:description" content="Portfolio do desenvolvedor FrontEnd Felipe Vash." />
+        <meta property="twitter:image" content="public/images/sitepreview.jpg" />
+
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
