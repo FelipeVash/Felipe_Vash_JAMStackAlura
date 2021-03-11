@@ -102,7 +102,7 @@ export default function Projeto() {
     <CardWrapper>
       {[
         {
-          url: 'https://instafolio.vercel.app/', name: 'INSTALURA', src: imgUrl1, alt: 'Foto do projeto Instalura',
+          url: 'https://instafolio.vercel.app/', name: 'INSTAFOLIO', src: imgUrl1, alt: 'Foto do projeto Instafolio',
         },
         {
           url: 'https://dbzquiz.vercel.app/', name: 'DBZ - QUIZ', src: imgUrl2, alt: 'Foto do projeto DBZ-Quiz',
