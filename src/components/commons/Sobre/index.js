@@ -66,7 +66,14 @@ const CardSobre = styled(Card)`
       min-height:333.88px;
     `,
     uhd: css`
-      max-width:950px;
+      max-width:1200px;
+      min-height: 400px;
+      .avatar{
+        min-width:180px;
+      }
+      p{
+        font-size:1.2rem;
+      }
     `,
   })}
   &:hover,

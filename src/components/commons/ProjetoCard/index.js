@@ -55,7 +55,7 @@ const CardProjeto = styled(Card)`
             max-width:500px;
         `,
     uhd: css`
-            max-width:550px;
+            max-width:700px;
         `,
   })}
   a{
