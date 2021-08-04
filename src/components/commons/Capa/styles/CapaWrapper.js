@@ -10,15 +10,10 @@ const CapaWrapper = styled.header`
   background-position: center;
   border-radius: 15px 15px 0 0;
   display:flex;
-  height:100%;
   justify-content: center;
+  min-height: fit-content;
+  max-height: 40%;
   width: 100%;
-
-  ${breakpointsMedia({
-    xl: css`
-      min-height:250px;
-    `,
-  })}
 `;
 
 export default CapaWrapper;
