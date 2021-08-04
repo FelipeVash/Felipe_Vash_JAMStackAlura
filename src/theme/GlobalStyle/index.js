@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
   /* Full height layout */
   html, body {
     display: flex;
-    min-height: 100vh;
+    min-height: max-content;
     width: 100%;
   }
   html{
