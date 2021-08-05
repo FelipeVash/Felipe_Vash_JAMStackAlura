@@ -2,11 +2,12 @@
 /* eslint-disable no-console */
 import React from 'react';
 import styled from 'styled-components';
+import emailjs, { init } from 'emailjs-com';
 import { CloseO } from '@styled-icons/evil/CloseO';
 import { Lottie } from '@crello/react-lottie';
 import successAnimation from './animations/success.json';
 import errorAnimation from './animations/error.json';
-import menssageAnimation from './animations/menssage.json';
+import messageAnimation from './animations/menssage.json';
 import { Grid } from '../../layout/Grid';
 import { Box } from '../../layout/Box';
 import { Button } from '../../commons/Button';
@@ -35,11 +36,10 @@ const CloseButton = styled(CloseO)`
 function FormContent() {
   const [isFormSubmited, setIsFormSubmited] = React.useState(false);
   const [submissionStatus, setSubmissionStatus] = React.useState(formStates.DEFAULT);
-
   const [userInfo, setUserInfo] = React.useState({
-    nome: '',
+    name: '',
     email: '',
-    menssage: '',
+    message: '',
   });
 
   function handleChange(event) {
@@ -52,58 +52,41 @@ function FormContent() {
 
   const isFormInvalid = (
     userInfo.email.length === 0
-    || userInfo.nome.length === 0
-    || userInfo.menssage.length === 0
+    || userInfo.name.length === 0
+    || userInfo.message.length === 0
   );
 
+  function sendEmail(event) {
+    init('user_Sseu4Y6OcUx07gs4I9jhK');
+    emailjs.sendForm('gmail', 'contact_dev', event.target, 'user_Sseu4Y6OcUx07gs4I9jhK')
+      .then((result) => {
+        setSubmissionStatus(formStates.DONE);
+        console.log(result.text);
+      }, (error) => {
+        setSubmissionStatus(formStates.ERROR);
+        console.error(error);
+      });
+  }
   return (
     <form onSubmit={(event) => {
       event.preventDefault();
+      sendEmail(event);
       setIsFormSubmited(true);
       setTimeout(() => {
         setUserInfo({
-          nome: '',
+          name: '',
           email: '',
-          menssage: '',
+          message: '',
         });
         setIsFormSubmited(false);
       }, 5000);
-      // Data Transfer Object - DTO
-      const userDTO = {
-        email: userInfo.email,
-        name: userInfo.nome,
-        message: userInfo.menssage,
-      };
-
-      fetch('https://contact-form-api-jamstack.herokuapp.com/message', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(userDTO),
-      })
-        .then((respostaDoServidor) => {
-          if (respostaDoServidor.ok) {
-            return respostaDoServidor.json();
-          }
-
-          throw new Error('Não foi possível cadastrar o usuários agora :(');
-        })
-        .then((respostaConvertidaEmObjeto) => {
-          setSubmissionStatus(formStates.DONE);
-          console.log(respostaConvertidaEmObjeto);
-        })
-        .catch((error) => {
-          setSubmissionStatus(formStates.ERROR);
-          console.error(error);
-        });
     }}
     >
       <Lottie
         width="100%"
         height="250px"
         className="lottie-container basic"
-        config={{ animationData: menssageAnimation, loop: true, autoplay: true }}
+        config={{ animationData: messageAnimation, loop: true, autoplay: true }}
       />
       <Text
         variant="title"
@@ -124,8 +107,8 @@ function FormContent() {
       <div>
         <TextField
           placeholder="Nome"
-          name="nome"
-          value={userInfo.nome}
+          name="name"
+          value={userInfo.name}
           onChange={handleChange} // capturadores de ação
           tag="input"
         />
@@ -144,8 +127,8 @@ function FormContent() {
       <div>
         <TextField
           placeholder="Mensagem"
-          name="menssage"
-          value={userInfo.menssage}
+          name="message"
+          value={userInfo.message}
           onChange={handleChange} // capturadores de ação
           tag="textarea"
           height="200px"
