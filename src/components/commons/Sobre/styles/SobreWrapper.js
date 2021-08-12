@@ -5,34 +5,29 @@ import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
 
 export const SobreWrapper = styled.main`
+    background-image: ${({ theme }) => theme.colors.background.secondary.color};
+    backdrop-filter: blur(5px);
+    border: 2.5px groove;
+    border-color: ${({ theme }) => theme.colors.borders.primary.color};
+    border-radius: 15px;
     display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-height: 100%;
+    min-height: fit-content;
+    padding:10px;
     width: 100%;
-    padding:20px;
-    margin:0;
+
     ${breakpointsMedia({
-    sm: css`
-                max-width:none;
-            `,
-    md: css`
-                max-width:none;
-            `,
-    lg: css`
-                max-width:none;
-            `,
-    xl: css`
-                max-width:none;
-            `,
-    xxl: css`
-                max-width:none;
-            `,
+    xxL: css`
+        height: 100%;
+    `,
     uhd: css`
-                max-width:none;
-                min-height: 40%;
-                justify-content: center;
-            `,
+        justify-content: flex-start;
+        `,
   })}
     p{  
       text-align: center;

@@ -12,11 +12,12 @@ const FooterWrapper = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => theme.colors.background.secondary.color};
+  background-image: ${({ theme }) => theme.colors.background.secondary.color};
+  backdrop-filter: blur(5px);
   width: 100%;
   min-height: 100px;
-  border-radius: 0px 0px 15px 15px;
-  border-top: 5px groove;
+  border-radius: 15px;
+  border: 2.5px groove;
   border-color: ${({ theme }) => theme.colors.borders.primary.color};
 `;
 
@@ -26,7 +27,7 @@ const IconsWrapper = styled.section`
   justify-content: space-evenly;
   background-color: ${({ theme }) => theme.colors.background.tertiary.color};
   border-radius: 15px;
-  border: 2px groove;
+  border: 2.5px groove;
   border-color: ${({ theme }) => theme.colors.borders.primary.color};
 `;
 
@@ -38,7 +39,7 @@ const Icons = styled.a`
     width:100%;
     img{
       width:40px;
-      border: 2px groove;
+      border: 2.5px groove;
       border-color: ${({ theme }) => theme.colors.borders.primary.color};
       border-radius: 50%;
       &:hover,

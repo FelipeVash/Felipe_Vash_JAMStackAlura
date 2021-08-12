@@ -1,6 +1,5 @@
 /* eslint-disable linebreak-style */
-import styled, { css } from 'styled-components';
-import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
+import styled from 'styled-components';
 
 const CapaWrapper = styled.header`
   align-items: center;
@@ -8,10 +7,13 @@ const CapaWrapper = styled.header`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  border-radius: 15px 15px 0 0;
+  border: 2.5px groove;
+  border-color: ${({ theme }) => theme.colors.borders.primary.color};
+  border-radius: 15px 15px 15px 15px;
   display:flex;
   justify-content: center;
   min-height: fit-content;
+  margin-bottom: 20px;
   max-height: 40%;
   width: 100%;
 `;

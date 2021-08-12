@@ -8,7 +8,7 @@ export const colors = {
       contrastText: '#ffffff',
     },
     secondary: {
-      color: '#000002',
+      color: 'radial-gradient(#FFFFFF5E 6%, #272730CC 120%)',
       contrastText: '#ffffff',
     },
     tertiary: {

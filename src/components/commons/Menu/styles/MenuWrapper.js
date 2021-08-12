@@ -12,10 +12,11 @@ export const MenuWrapper = styled.nav`
 
 export const MenuList = styled.ul`
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.background.secondary.color};
-  border-bottom: 5px groove;
-  border-top: 5px groove;
+  background-image: ${({ theme }) => theme.colors.background.secondary.color};
+  backdrop-filter: blur(5px);
+  border: 2.5px groove;
   border-color: ${({ theme }) => theme.colors.borders.primary.color};
+  border-radius: 15px;
   display: flex;
   flex-wrap: wrap;
   font-family: 'Rubik', sans-serif;
@@ -26,6 +27,7 @@ export const MenuList = styled.ul`
   width:100%;
   li button {
     text-align: center;
+    text-shadow: 2px 2px #000000;
     display: flex;
     align-items:center;
     text-decoration: none;
