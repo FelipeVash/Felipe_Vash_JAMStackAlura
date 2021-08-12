@@ -114,18 +114,39 @@ const LogosContainer = styled.div`
 `;
 
 export default function Sobre() {
+  const [title, setTitle] = React.useState([]);
+  const [text, setText] = React.useState([]);
+  React.useEffect(() => {
+    fetch('https://graphql.datocms.com/', {
+      method: 'POST',
+      headers: {
+        Authorization: '4ee58e8a7f7f6c97e44d0feab9e919',
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify({
+        query: `query {
+          aboutPage {
+            pageTitle(locale: pt_BR)
+            pageDescription(locale: pt_BR)
+          }
+        }`,
+      }),
+    })
+      .then((res) => res.json())
+      .then((resComplete) => {
+        setTitle(resComplete.data.aboutPage.pageTitle);
+        setText(resComplete.data.aboutPage.pageDescription);
+      });
+  }, []);
+
   return (
     <SobreWrapper>
-      <SobreTexto>SOBRE MIM</SobreTexto>
+      <SobreTexto>{title}</SobreTexto>
       <CardSobre>
         <img className="avatar" src={fotoUrl} alt="Foto do Felipe Vash" />
         <Text as="p" variant="paragraph1" margin="20px" color="#000002">
-          Com experiência em TI desde muito jovem, ganhador de bolsa de estudos integral, estudei WebDevelopment, Design Gráfico e Arquitetura de Rede ao longo dos anos e cresci em ambiente full tech, sempre pesquisando em todas as mídias.
-          Nasci na época do crescimento da internet e cresci na época da grande transição.
-          Tenho total experiência em todas as plataformas Windows, MacOS e Linux Ubuntu.
-          Apaixonado por tecnologia e como o futuro será construído a partir dela, busco sempre customizar minha configuração desde as especificações do hardware até o SO e aplicativos.
-          Movido pelo objetivo de acesso pleno e democrático a tecnologia, foco meus projetos tanto em desempenho, estética, responsividade quanto em acessibilidade para todas as pessoas.
-          Estudante ávido em busca constante de aperfeiçoamento e de novos conhecimentos e habilidades.
+          {text}
         </Text>
         <LogosContainer>
           <img src={jamstackLogo} alt="Logo JamStack." />
