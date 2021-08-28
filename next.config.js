@@ -27,4 +27,9 @@ const webpack = (config, options) => {
   return config;
 };
 
-module.exports = { webpack };
+module.exports = {
+  webpack,
+  images: {
+    disableStaticImages: true,
+  },
+};
