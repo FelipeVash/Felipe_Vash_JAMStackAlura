@@ -1,5 +1,6 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
+import Image from 'next/image';
 import styled, { css } from 'styled-components';
 import { Card } from '../Card';
 import { TextStyleVariants } from '../../foundation/Text';
@@ -25,7 +26,8 @@ const CardWrapper = styled.section`
 `;
 
 const CardProjeto = styled(Card)`
-   ${breakpointsMedia({
+  padding:15px;
+  ${breakpointsMedia({
     sm: css`
             max-width:550px;
             min-width:fit-content;
@@ -36,20 +38,17 @@ const CardProjeto = styled(Card)`
     lg: css`
             max-width:550px;
             min-width:350px;
-            min-height:200px;
         `,
     xl: css`
-            max-width:300px;
-            min-height:200px;
+            max-width:500px;
+            max-height:350px;
         `,
     xxl: css`
-            min-width:300px;
-            max-width: 350px;
-            min-height:200px;
+            max-width:300px;
         `,
     uhd: css`
-            justify-content:flex-start;
-            max-width: 450px;
+            max-width:500px;
+            max-height:350px;
         `,
   })}
   a{
@@ -65,9 +64,8 @@ const CardProjeto = styled(Card)`
     padding:5px;
     text-decoration: none;
     transition: .3s;
-    max-width:fit-content;
-    max-height:fit-content;
     backdrop-filter: blur(50px);
+    width: 100%;
     ${breakpointsMedia({
     xs: css`
         ${TextStyleVariants.smallestException}
@@ -89,19 +87,21 @@ const CardProjeto = styled(Card)`
   }
 `;
 
-const ProjetoImage = styled.img`
-    width: 100%;
-    max-width: 500px;
-    margin:5px;
+const ProjetoImage = styled(Image)`
+  border-radius: 15px;
+  img{
+    margin: 5px;
     box-shadow: 1px 1px 10px 2px black;
     border-radius: 15px;
+  }
 `;
 
 const ProjetoNome = styled.p`
     color: white;
     font-size:1.5rem;
     font-weight:500;
-    margin:5px;
+    margin: 0;
+    padding: 5px;
     text-align: center;
     width:100%;
     border-radius: 15px;
@@ -127,7 +127,7 @@ export default function Projeto() {
       ].map((link) => (
         <CardProjeto key={link.url}>
           <a href={link.url}>
-            <ProjetoImage src={link.src} alt={link.alt} />
+            <ProjetoImage src={link.src} alt={link.alt} width={500} height={250} priority="true" />
             <ProjetoNome>
               {link.name}
             </ProjetoNome>
