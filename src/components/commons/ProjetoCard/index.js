@@ -116,7 +116,7 @@ export default function Projeto() {
           url: 'https://instalura.felipevash.vercel.app/', name: 'INSTALURA', src: imgUrl1, alt: 'Foto do projeto Instafolio',
         },
         {
-          url: 'https://alurakut-felipevash.vercel.app/', name: 'ALURAKUT', src: imgUrl4, alt: 'Foto do projeto AluraKut',
+          url: 'https://alurakut.felipevash.vercel.app/', name: 'ALURAKUT', src: imgUrl4, alt: 'Foto do projeto AluraKut',
         },
         {
           url: 'https://dbzquiz.vercel.app/', name: 'DBZ - QUIZ', src: imgUrl2, alt: 'Foto do projeto DBZ-Quiz',
