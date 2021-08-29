@@ -1,9 +1,11 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable linebreak-style */
 /* eslint-disable max-len */
 /* eslint-disable linebreak-style */
 /* eslint-disable no-undef */
 import React from 'react';
 import styled, { css } from 'styled-components';
+import Link from 'next/link';
 import { Text } from '../../foundation/Text';
 import { SobreWrapper } from './styles/SobreWrapper';
 import { Card } from '../Card';
@@ -147,6 +149,12 @@ export default function Sobre() {
         <img className="avatar" src={fotoUrl} alt="Foto do Felipe Vash" />
         <Text as="p" variant="paragraph1" margin="20px" color="#000002">
           {text}
+          <br />
+          Gostaria de olhar o meu currículo? Baixe
+          {' '}
+          <Link href="https://1drv.ms/b/s!AhG5HK_IN4vNludEvqrLell7kITs-g?e=97yDMI">
+            <a>aqui!</a>
+          </Link>
         </Text>
         <LogosContainer>
           <img src={jamstackLogo} alt="Logo JamStack." />
