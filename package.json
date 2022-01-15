@@ -25,7 +25,7 @@
     "react-dom": "^16.8.6",
     "react-is": "^16.8.6",
     "react-lottie": "^1.2.3",
-    "shelljs": "^0.8.4",
+    "shelljs": "^0.8.5",
     "styled-components": "^5.0.0",
     "styled-icons": "^10.29.0",
     "styled-normalize": "^8.0.7"
