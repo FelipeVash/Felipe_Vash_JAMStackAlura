@@ -4230,14 +4230,12 @@ react-refresh@0.8.3:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
 
-react@^16.8.6:
-  version "16.14.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
-  integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==
+react@^18.1.0-next-ebd7ff65b-20220401:
+  version "18.1.0-next-ebd7ff65b-20220401"
+  resolved "https://registry.yarnpkg.com/react/-/react-18.1.0-next-ebd7ff65b-20220401.tgz#97a8d0733dcbefd15bc7ef05e2c6425fbb84df47"
+  integrity sha512-jW0V4pWetgYKqAevoIs6ThgWO6wtin0/7tUHAghjjQF5RSGmdjJYDCSn5T04c3hwTuYGq4+4BMMe970Qka71Ig==
   dependencies:
     loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
 
 read-pkg-up@^3.0.0:
   version "3.0.0"

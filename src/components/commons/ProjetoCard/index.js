@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable linebreak-style */
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styled, { css } from 'styled-components';
 import { Card } from '../Card';
 import { TextStyleVariants } from '../../foundation/Text';
@@ -126,12 +128,14 @@ export default function Projeto() {
         },
       ].map((link) => (
         <CardProjeto key={link.url}>
-          <a href={link.url}>
-            <ProjetoImage src={link.src} alt={link.alt} width={500} height={250} priority="true" />
-            <ProjetoNome>
-              {link.name}
-            </ProjetoNome>
-          </a>
+          <Link href={link.url}>
+            <a>
+              <ProjetoImage src={link.src} alt={link.alt} width={500} height={250} priority="true" />
+              <ProjetoNome>
+                {link.name}
+              </ProjetoNome>
+            </a>
+          </Link>
         </CardProjeto>
       ))}
     </CardWrapper>

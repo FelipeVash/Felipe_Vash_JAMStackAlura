@@ -12,7 +12,8 @@ const LogoWrapper = styled.figure`
   min-width: 150px;
   justify-content: center;
   align-items: center;
-  padding:10px;
+  border-radius: 100%;
+  border: 5px groove ${({ theme }) => theme.colors.borders.primary.color};
 `;
 
 export default function Capa() {
